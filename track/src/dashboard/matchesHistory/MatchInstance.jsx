@@ -64,9 +64,15 @@ export default function MatchInstance({index, _id, name, loc, date, isCompleted,
                                 >
                                     <h1 className={`select-none m-1 px-5 pl-2 p-[2.5px] whitespace-nowrap font-robotoSans ${theme ? 'hover:bg-[#005fb8]' : 'hover:bg-[#0078d4]'} hover:text-white rounded-sm`}>Delete Match</h1>
                                 </li>
-                                <li className={`text-[.8rem] ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} cursor-pointer`}>
-                                    <h1 className={`select-none m-1 px-5 pl-2 p-[2.5px] whitespace-nowrap font-robotoSans ${theme ? 'hover:bg-[#005fb8]' : 'hover:bg-[#0078d4]'} hover:text-white rounded-sm`}>Share Results</h1>
+                                {isCompleted === true ?
+                                <li>
+                                    <Link to={`/match/${_id}`} className={`text-[.8rem] ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} cursor-pointer`}>
+                                        <h1 className={`select-none m-1 px-5 pl-2 p-[2.5px] whitespace-nowrap font-robotoSans ${theme ? 'hover:bg-[#005fb8]' : 'hover:bg-[#0078d4]'} hover:text-white rounded-sm`}>Share Results</h1>
+                                    </Link>
                                 </li>
+                                :
+                                <></>
+                                }
                             </ul>
                             :
                             ''
