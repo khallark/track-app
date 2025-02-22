@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://track-app.up.railway.app/',
+        target: 'https://track-app.up.railway.app',
         changeOrigin: true,
         secure: true
       }
