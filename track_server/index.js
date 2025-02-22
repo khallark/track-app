@@ -11,7 +11,7 @@ app.use(express.json({ limit: '10mb' }))
 const PORT = process.env.PORT || 3000
 
 app.use(cors({
-    origin: 'track-app-pi.vercel.app',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }))
