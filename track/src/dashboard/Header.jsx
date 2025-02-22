@@ -37,7 +37,9 @@ export default function Header() {
     }
     return (
         <div className={`px-3 relative flex items-center gap-3 w-full min-h-[60px] min-w-[360px] ${theme ? 'bg-[#f8f8f8]' : 'bg-[#111114]'} border-b ${theme ? 'border-b-[#e5e5e5]' : 'border-b-[#2b2b2b]'}`}>
-            <div className={`h-[35px] min-w-[35px] border ${theme ? 'border-[#e5e5e5]' : 'border-[#2b2b2b]'} ${ theme ? 'bg-[#ffffff]' : 'bg-[#2A2A2A]'} rounded-full`}></div>
+            <Link to='/account/me' className={`h-[35px] min-w-[35px] border ${theme ? 'border-[#e5e5e5]' : 'border-[#2b2b2b]'} ${ theme ? 'bg-[#ffffff]' : 'bg-[#2A2A2A]'} rounded-full overflow-hidden`}>
+                <img className='h-[40px] min-w-[40px]' src='https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e1af12bf-3025-44a5-9be7-4d3c46beb99b/892732bc-e5a7-4f8b-ada6-3867d2d9f740.png'/>
+            </Link>
             <div className={`font-[100] flex items-center gap-2 transition duration-100 ease-linear h-[35px] w-full border ${theme ? 'border-[#e5e5e5]' : 'border-[#2b2b2b]'} ${theme ? 'hover:border-[#005fb8]' : 'hover:border-[#0078d4]'} ${ theme ? 'bg-[#ffffff]' : 'bg-[#2A2A2A]'} rounded-sm font-robotoSans text-[.9rem] ${theme ? 'text-[#9494b4]' : 'text-[#8a8a8a]'} ${theme ? 'hover:text-[#3b3b3b]' : 'hover:text-[#CCCCCC]'} px-3 text-nowrap overflow-y-hidden overflow-x-auto overlap-scr`}>
                 {(() => {
                     if(pathName.includes('match-id')) return `dashboard > match > ${data ? data.name : ''} ${pathName.split('/')[4] ? `> ${pathName.split('/')[4]}` : ''}`
