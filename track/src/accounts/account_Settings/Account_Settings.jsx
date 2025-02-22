@@ -104,7 +104,7 @@ export default function Account_Settings() {
                             onClick={updateAccount}
                             className={`flex items-center justify-center border border-gray-500 ${disabled ? 'bg-none brightness-[2]' : 'bg-white hover:brightness-[.9]'} w-[150px] h-[40px]`}
                         >
-                            {loading ? <Loading/> : 'Update'}
+                            {loading ? <Loading stroke='black'/> : 'Update'}
                         </button>
                     </div>
                 </div>
