@@ -61,7 +61,7 @@ export default function Header() {
                 <div className='hidden 600:flex items-center gap-x-[10px] mr-1'>
                     {status === 1 ?
                         <>         
-                            <h1 className='font-robotoSans text-white 500:text-[0rem] 700:text-[1rem]'>{account.showName}</h1>               
+                            <h1 className='font-robotoSans text-white 500:text-[0rem] 700:text-[.7rem]'>{account.showName}</h1>               
                             <Link to='account' target='_blank' className='transition-all duration-[.07s] border border-[#CCCCCC] size-[37px] ease-linear text-[.5rem] 700:text-[.8rem] rounded-full overflow-hidden hover:rounded-[25px] text-white active:brightness-[.9]'><img src='https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/e1af12bf-3025-44a5-9be7-4d3c46beb99b/892732bc-e5a7-4f8b-ada6-3867d2d9f740.png'/></Link>
                             <div><button className='font-robotoSans transition-all duration-[.07s] ease-linear px-[20px] py-[8px] text-[.5rem] 700:text-[.8rem] border-[1px] border-white hover:bg-white rounded-[0px] hover:rounded-[25px] text-white active:brightness-[.9]' onClick={logout} style={{backgroundColor: `#${color}`}}>Logout</button></div>
                         </>
