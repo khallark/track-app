@@ -24,7 +24,7 @@ import Following from './accounts/following/Following.jsx'
 import Account_MatchesHistory from './accounts/account_Matches_History/Account_MatchesHistory.jsx'
 import Account_Settings from './accounts/account_Settings/Account_Settings.jsx'
 import CreateNewMatch from './dashboard/CreateNewMatch/CreateNewMatch.jsx'
-import None from './dashboard/none.jsx'
+import None from './dashboard/None.jsx'
 import { Provider } from 'react-redux'
 import { Store } from './redux/Store.js'
 import Player from './people/Player/Player.jsx'
@@ -38,7 +38,7 @@ import ScoreCard from './matches/match/ScoreCard.jsx'
 import Overs from './matches/match/Overs.jsx'
 import Squads from './matches/match/Squads.jsx'
 import SearchMatch from './matches/search/SearchMatch.jsx'
-import Page404 from './page404.jsx'
+import Page404 from './Page404.jsx'
 
 const Router = createBrowserRouter([
   {

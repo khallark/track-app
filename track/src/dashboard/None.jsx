@@ -6,7 +6,7 @@ export default function None() {
     const theme = useSelector(state => state.globals.theme)
     const account = useSelector(state => state.account.data)
     useEffect(() => {
-        document.title = `Dashboard - ${account.showName}`
+        document.title = `Dashboard - ${account?.showName}`
     }, [])
     return (
         <div className={`font-[100] flex gap-y-3 justify-center items-center h-full w-full ${theme ? 'bg-[#ffffff]' : 'bg-[#1f1f1f]'}`}>
