@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
-import Logo from '../assets/Logo'
+import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
 

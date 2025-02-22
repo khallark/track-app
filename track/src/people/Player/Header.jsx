@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-// import Logo from '../assets/Logo'
 
 export default function Header() {
     const [menu, setMenu] = useState(false)

@@ -1,11 +1,10 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetch_account, setStatus } from './redux/Slices'
 import axios from 'axios'
 import Account_Loading from './Account_Loading'
-import { motion, AnimatePresence } from "framer-motion"
 
 function App() {
   const navigate = useNavigate()

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, NavLink, Outlet, useLocation, useParams } from 'react-router-dom'
 import Loading from '../../assets/Loading'
-import Page404 from '../../page404'
+import Page404 from '../../Page404'
 
 export default function Match() {
     const domain = useSelector(state => state.globals.domain)

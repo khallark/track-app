@@ -1,5 +1,4 @@
 import React from 'react'
-import { Line } from 'react-chartjs-2'
 export default function Batter({batter, fill, size}) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill={fill} height={size} width={size} version="1.1" id="Layer_1" viewBox="0 0 502 502" xmlSpace="preserve">
