@@ -355,13 +355,17 @@ export default function TackScore() {
                 })
                 players_bowling.forEach(player => {
                     if(player.status.name === firstBowler) {
+                        curr.overs.push([player.status.name])
                         player.status.isBowling = true
                     }
                 })
             } else if(numberOfActiveBatters === 1) {
                 if(numberOfActiveBowlers === 0) {
                     players_bowling.forEach(player => {
-                        if(player.status.name === nextBowler) player.status.isBowling = true
+                        if(player.status.name === nextBowler) {
+                            curr.overs.push([player.status.name])
+                            player.status.isBowling = true
+                        }
                     })
                 }
                 let strike;
@@ -377,7 +381,10 @@ export default function TackScore() {
             } else {
                 if(numberOfActiveBowlers === 0) {
                     players_bowling.forEach(player => {
-                        if(player.status.name === nextBowler) player.status.isBowling = true
+                        if(player.status.name === nextBowler) {
+                            curr.overs.push([player.status.name])
+                            player.status.isBowling = true
+                        }
                     })
                 } else {
                     const runs = Number(runsAmount)
@@ -431,7 +438,7 @@ export default function TackScore() {
                         })
                         if(isWicket === 'Yes') {
                             stats.wickets += 1
-                            curr.overs.push('Wckt')
+                            curr.overs[curr.overs.length - 1].push('Wckt')
 
                             switch (wicketType) {
                             case 'bold':
@@ -479,7 +486,7 @@ export default function TackScore() {
                                 break;
                             }
                         } else {
-                            curr.overs.push(`${runs}`)
+                            curr.overs[curr.overs.length - 1].push(`${runs}`)
                         }
 
                         inningsFinishCheck('d')
@@ -516,7 +523,7 @@ export default function TackScore() {
                         })
                         if(isWicket === 'Yes') {
                             stats.wickets += 1
-                            curr.overs.push(`Wd(${runs}),Wckt`)
+                            curr.overs[curr.overs.length - 1].push(`Wd(${runs}),Wckt`)
 
                             switch (wicketType) {
                             case 'stumped':
@@ -557,7 +564,7 @@ export default function TackScore() {
                                 break;
                             }
                         } else {
-                            curr.overs.push(`Wd(${runs})`)
+                            curr.overs[curr.overs.length - 1].push(`Wd(${runs})`)
                         }
 
                         inningsFinishCheck('d')
@@ -602,7 +609,7 @@ export default function TackScore() {
                         })
                         if(isWicket === 'Yes') {
                             stats.wickets += 1
-                            curr.overs.push(`Nb(${runs}),Wckt`)
+                            curr.overs[curr.overs.length - 1].push(`Nb(${runs}),Wckt`)
 
                             switch (wicketType) {
                             case 'run out':
@@ -623,7 +630,7 @@ export default function TackScore() {
                                 break;
                             }
                         } else {
-                            curr.overs.push(`Nb(${runs})`)
+                            curr.overs[curr.overs.length - 1].push(`Nb(${runs})`)
                         }
 
                         inningsFinishCheck('d')
@@ -645,6 +652,7 @@ export default function TackScore() {
                     })
                     players_bowling.forEach(player => {
                         if(player.status.name === firstBowler) {
+                            curr.overs.push([player.status.name])
                             player.status.isBowling = true
                         }
                     })
@@ -663,7 +671,10 @@ export default function TackScore() {
             } else {
                 if(numberOfActiveBowlers === 0) {
                     players_bowling.forEach(player => {
-                        if(player.status.name === nextBowler) player.status.isBowling = true
+                        if(player.status.name === nextBowler) {
+                            curr.overs.push([player.status.name])
+                            player.status.isBowling = true
+                        }
                     })
                 } else {
                     const runs = Number(runsAmount)
@@ -712,7 +723,7 @@ export default function TackScore() {
                         })
                         if(isWicket === 'Yes') {
                             stats.wickets += 1
-                            curr.overs.push(`Wckt`)
+                            curr.overs[curr.overs.length - 1].push(`Wckt`)
 
                             switch (wicketType) {
                             case 'bold':
@@ -752,7 +763,7 @@ export default function TackScore() {
                                 break;
                             }
                         } else {
-                            curr.overs.push(`${runs}`)
+                            curr.overs[curr.overs.length - 1].push(`${runs}`)
                         }
 
                         inningsFinishCheck('s')
@@ -775,7 +786,7 @@ export default function TackScore() {
 
                         if(isWicket === 'Yes') {
                             stats.wickets += 1
-                            curr.overs.push(`Wd(${runs}),Wckt`)
+                            curr.overs[curr.overs.length - 1].push(`Wd(${runs}),Wckt`)
                             
                             switch (wicketType) {
                             case 'stumped':
@@ -807,7 +818,7 @@ export default function TackScore() {
                                 break;
                             }
                         } else {
-                            curr.overs.push(`Wd(${runs})`)
+                            curr.overs[curr.overs.length - 1].push(`Wd(${runs})`)
                         }
 
                         inningsFinishCheck('s')
@@ -847,7 +858,7 @@ export default function TackScore() {
                         })
                         if(isWicket === 'Yes') {
                             stats.wickets += 1
-                            curr.overs.push(`Nb(${runs}),Wckt`)
+                            curr.overs[curr.overs.length - 1].push(`Nb(${runs}),Wckt`)
 
                             switch (wicketType) {
                             case 'run out':
@@ -862,7 +873,7 @@ export default function TackScore() {
                                 break;
                             }
                         } else {
-                            curr.overs.push(`Nb(${runs})`)
+                            curr.overs[curr.overs.length - 1].push(`Nb(${runs})`)
                         }
                         
                         inningsFinishCheck('s')
