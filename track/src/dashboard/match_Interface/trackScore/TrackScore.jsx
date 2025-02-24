@@ -6,6 +6,8 @@ import { fetch_match } from '../../../redux/Slices'
 import Loading from '../../../assets/Loading'
 import { useOutletContext } from 'react-router-dom'
 
+const defVal = '- - choose - -'
+
 function SelectTag({label, options, val, set}) {
     const theme = useSelector(state => state.globals.theme)
     return (
@@ -52,7 +54,7 @@ function InputTag({label, val, set, isWicket, wicketType}) {
                 className={`font-robotoSans px-3 py-1 ${theme ? 'bg-[#d5d5d5]' : 'bg-[#313131]'} ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} text-[.7rem] 700:text-[.9rem] flex-grow rounded-sm border ${theme ? 'border-[#d5d5d5]' : 'border-[#313131]'} ${theme ? 'hover:bg-[#EEEEEE]' : 'hover:bg-[#363636]'} ${theme ? 'focus:border-[#005fb8]' : 'focus:border-[#0078d4]'} outline-none`}
                 value={val}
                 onChange={(e) => {
-                    if(isWicket === 'Yes' && wicketType !== '- - choose - -' && wicketType !== 'run out') set('0')
+                    if(isWicket === 'Yes' && wicketType !== defVal && wicketType !== 'run out') set('0')
                     else set(e.target.value)
                 }}
             />
@@ -62,8 +64,8 @@ function InputTag({label, val, set, isWicket, wicketType}) {
 
 function NormalBall({val, set, data}) {
     const _data = useSelector(state => state.dashboard.data)
-    const { runsAmount, runsAccounted, isWicket, wicketType, catcher, whoIsOut, thrower, keeper } = val
-    const { setRunsAmount, setRunsAccounted, setIsWicket, setWicketType, setCatcher, setWhoIsOut, setThrower, setKeeper } = set
+    const { runsAmount, runsAccounted, isWicket, wicketType, catcher, changeEnds, whoIsOut, thrower, keeper } = val
+    const { setRunsAmount, setRunsAccounted, setIsWicket, setWicketType, setCatcher, setChangeEnds, setWhoIsOut, setThrower, setKeeper } = set
 
     return (
         <>
@@ -71,26 +73,29 @@ function NormalBall({val, set, data}) {
             <InputTag label='runs amount' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType}/>
             <SelectTag label='wicket taken?' options={['No', 'Yes']} val={isWicket} set={setIsWicket}/>
             {(() => {
-                if(isWicket === '- - choose - -') return (<></>)
+                if(isWicket === defVal) return (<></>)
                 if(isWicket === 'Yes') {
                     return (
                         <>
-                            <SelectTag label='wicket type' options={['- - choose - -', 'bold', 'LBW', 'catch', 'run out', 'stumped']} val={wicketType} set={setWicketType}/>
+                            <SelectTag label='wicket type' options={[defVal, 'bold', 'LBW', 'catch', 'run out', 'stumped']} val={wicketType} set={setWicketType}/>
                             {(() => {
                                 if(wicketType === 'catch') return (
-                                    <SelectTag label='player who catched the ball' options={['- - choose - -', ...data.map(element => element.status.name)]} val={catcher} set={setCatcher}/>
+                                    <>
+                                    <SelectTag label='player who catched the ball' options={[defVal, ...data.map(element => element.status.name)]} val={catcher} set={setCatcher}/>
+                                    <SelectTag label='change ends?' options={['No', 'Yes']} val={changeEnds} set={setChangeEnds}/>
+                                    </>
                                 )
                                 if(wicketType === 'run out') return (
                                     <>
                                         {_data.menOnStrike === 'double' ?
-                                            <SelectTag label='who is out' options={['- - choose - -', 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
+                                            <SelectTag label='who is out' options={[defVal, 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
                                             :
                                             <></>
                                         }
-                                        <SelectTag label='thrower name' options={['- - choose - -', ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
+                                        <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
                                     </>
                                 )
-                                if(wicketType === 'stumped') return (<SelectTag label='keeper name' options={['- - choose - -', ...data.map(element => element.status.name)]} val={keeper} set={setKeeper}/>)
+                                if(wicketType === 'stumped') return (<SelectTag label='keeper name' options={[defVal, ...data.map(element => element.status.name)]} val={keeper} set={setKeeper}/>)
                             })()}
                         </>
                     )
@@ -109,20 +114,20 @@ function WideBall({val, set, data}) {
             <InputTag label='runs amount from byes' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType}/>
             <SelectTag label='wicket taken?' options={['No', 'Yes']} val={isWicket} set={setIsWicket}/>
             {(() => {
-                if(isWicket === '- - choose - -') return (<></>)
+                if(isWicket === defVal) return (<></>)
                 if(isWicket === 'Yes') {
                     return (
                         <>
-                            <SelectTag label='wicket type' options={['- - choose - -', 'run out', 'stumped']} val={wicketType} set={setWicketType}/>
+                            <SelectTag label='wicket type' options={[defVal, 'run out', 'stumped']} val={wicketType} set={setWicketType}/>
                             {(() => {
-                                if(wicketType === '- - choose - -') return (<></>)
+                                if(wicketType === defVal) return (<></>)
                                 if(wicketType === 'run out' && _data.menOnStrike === 'double') return (
                                     <>
-                                        <SelectTag label='who is out' options={['- - choose - -', 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
-                                        <SelectTag label='thrower name' options={['- - choose - -', ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
+                                        <SelectTag label='who is out' options={[defVal, 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
+                                        <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
                                     </>
                                 )
-                                if(wicketType === 'stumped') return (<SelectTag label='keeper name' options={['- - choose - -', ...data.map(element => element.status.name)]} val={keeper} set={setKeeper}/>)
+                                if(wicketType === 'stumped') return (<SelectTag label='keeper name' options={[defVal, ...data.map(element => element.status.name)]} val={keeper} set={setKeeper}/>)
                             })()}
                         </>
                     )
@@ -142,20 +147,20 @@ function NoBall({val, set, data}) {
             <InputTag label='runs amount' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType}/>
             <SelectTag label='wicket taken?' options={['No', 'Yes']} val={isWicket} set={setIsWicket}/>
             {(() => {
-                if(isWicket === '- - choose - -') return (<></>)
+                if(isWicket === defVal) return (<></>)
                 if(isWicket === 'Yes') {
                     return (
                         <>
-                            <SelectTag label='wicket type' options={['- - choose - -', 'run out']} val={wicketType} set={setWicketType}/>
+                            <SelectTag label='wicket type' options={[defVal, 'run out']} val={wicketType} set={setWicketType}/>
                             {(() => {
-                                if(wicketType === '- - choose - -') return (<></>)
+                                if(wicketType === defVal) return (<></>)
                                 if(wicketType === 'run out' && _data.menOnStrike === 'double') return (
                                     <>
-                                        <SelectTag label='who is out' options={['- - choose - -', 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
-                                        <SelectTag label='thrower name' options={['- - choose - -', ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
+                                        <SelectTag label='who is out' options={[defVal, 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
+                                        <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
                                     </>
                                 )
-                                if(wicketType === 'stumped') return (<SelectTag label='keeper name' options={['- - choose - -', ...data.map(element => element.status.name)]} val={keeper} set={setKeeper}/>)
+                                if(wicketType === 'stumped') return (<SelectTag label='keeper name' options={[defVal, ...data.map(element => element.status.name)]} val={keeper} set={setKeeper}/>)
                             })()}
                         </>
                     )
@@ -169,43 +174,45 @@ export default function TackScore() {
     const data = useSelector(state => state.dashboard.data)
     const theme = useSelector(state => state.globals.theme)
     const matchId = useOutletContext()
-    const [ballType, setBallType] = useState('- - choose - -')
+    const [ballType, setBallType] = useState(defVal)
     const [runsAccounted, setRunsAccounted] = useState('made by batsman')
     const [runsAmount, setRunsAmount] = useState('')
     const [isWicket, setIsWicket] = useState('No')
-    const [wicketType, setWicketType] = useState('- - choose - -')
-    const [catcher, setCatcher] = useState('- - choose - -') // catch
-    const [whoIsOut, setWhoIsOut] = useState('- - choose - -') // run-out (striker / non-striker)
-    const [thrower, setThrower] = useState('- - choose - -') // run-out (thrower name)
-    const [keeper, setKeeper] = useState('- - choose - -') // stumped
+    const [wicketType, setWicketType] = useState(defVal)
+    const [catcher, setCatcher] = useState(defVal) // catch
+    const [changeEnds, setChangeEnds] = useState('No')
+    const [whoIsOut, setWhoIsOut] = useState(defVal) // run-out (striker / non-striker)
+    const [thrower, setThrower] = useState(defVal) // run-out (thrower name)
+    const [keeper, setKeeper] = useState(defVal) // stumped
     const [isDisabled, setIsDisabled] = useState(true)
 
-    const [onStrike, setOnStrike] = useState('- - choose - -')
-    const [nonStrike, setNonStrike] = useState('- - choose - -')
-    const [firstBowler, setFirstBowler] = useState('- - choose - -')
-    const [nextBatter, setNextBatter] = useState('- - choose - -')
-    const [nextBowler, setNextBowler] = useState('- - choose - -')
+    const [onStrike, setOnStrike] = useState(defVal)
+    const [nonStrike, setNonStrike] = useState(defVal)
+    const [firstBowler, setFirstBowler] = useState(defVal)
+    const [nextBatter, setNextBatter] = useState(defVal)
+    const [nextBowler, setNextBowler] = useState(defVal)
 
     useEffect(() => {
         setRunsAccounted('made by batsman')
         setIsWicket('No')
-        setWicketType('- - choose - -')
-        setCatcher('- - choose - -')
-        setWhoIsOut('- - choose - -')
-        setThrower('- - choose - -')
-        setKeeper('- - choose - -')
+        setWicketType(defVal)
+        setCatcher(defVal)
+        setWhoIsOut(defVal)
+        setThrower(defVal)
+        setKeeper(defVal)
     }, [ballType])
 
     useEffect(() => {
-        setWicketType('- - choose - -')
+        setWicketType(defVal)
     }, [isWicket])
 
     useEffect(() => {
-        if(wicketType !== '- - choose - -' && wicketType !== 'run out') setRunsAmount(0)
-        setCatcher('- - choose - -')
-        setWhoIsOut('- - choose - -')
-        setThrower('- - choose - -')
-        setKeeper('- - choose - -')
+        if(wicketType !== defVal && wicketType !== 'run out') setRunsAmount(0)
+        setChangeEnds('No')
+        setCatcher(defVal)
+        setWhoIsOut(defVal)
+        setThrower(defVal)
+        setKeeper(defVal)
     }, [wicketType])
 
     const [numberOfActiveBatters, setNumberOfActiveBatters] = useState(0)
@@ -226,38 +233,38 @@ export default function TackScore() {
         
         if(data.menOnStrike === 'double') {
             if(numberOfActiveBatters === 0) {
-                if(onStrike === '- - choose - -' || nonStrike === '- - choose - -' || firstBowler === '- - choose - -') setIsDisabled(true)
+                if(onStrike === defVal || nonStrike === defVal || firstBowler === defVal) setIsDisabled(true)
                 else setIsDisabled(false)
             } else if(numberOfActiveBatters === 1) {
                 if(numberOfActiveBowlers === 0) {
-                    if(nextBowler === '- - choose - -' || nextBatter === '- - choose - -') setIsDisabled(true)
+                    if(nextBowler === defVal || nextBatter === defVal) setIsDisabled(true)
                     else setIsDisabled(false)
                 } else {
-                    if(nextBatter === '- - choose - -') setIsDisabled(true)
+                    if(nextBatter === defVal) setIsDisabled(true)
                     else setIsDisabled(false)
                 }
             } else {
                 if(numberOfActiveBowlers === 0) {
-                    if(nextBowler === '- - choose - -') setIsDisabled(true)
+                    if(nextBowler === defVal) setIsDisabled(true)
                     else setIsDisabled(false)
                 } else {
-                    if(ballType === '- - choose - -') setIsDisabled(true)
+                    if(ballType === defVal) setIsDisabled(true)
                     else {
                         if(runsAmount === '' || isNaN(runsAmount)) setIsDisabled(true)
                         else if(isWicket === 'No') setIsDisabled(false)
                         else {
-                            if(wicketType === '- - choose - -') setIsDisabled(true)
+                            if(wicketType === defVal) setIsDisabled(true)
                             if(wicketType === 'bold' || wicketType === 'LBW') setIsDisabled(false)
                             if(wicketType === 'catch') {
-                                if(catcher !== '- - choose - -') setIsDisabled(false)
+                                if(catcher !== defVal) setIsDisabled(false)
                                 else setIsDisabled(true)
                             }
                             if(wicketType === 'run out') {
-                                if(whoIsOut !== '- - choose - -' && thrower !== '- - choose - -') setIsDisabled(false)
+                                if(whoIsOut !== defVal && thrower !== defVal) setIsDisabled(false)
                                 else setIsDisabled(true)
                             }
                             if(wicketType === 'stumped') {
-                                if(keeper !== '- - choose - -') setIsDisabled(false)
+                                if(keeper !== defVal) setIsDisabled(false)
                                 else setIsDisabled(true)
                             }
                         }
@@ -267,39 +274,39 @@ export default function TackScore() {
         } else {
             if(numberOfActiveBatters === 0) {
                 if(curr.current.stats.balls === 0) {
-                    if(onStrike === '- - choose - -' || firstBowler === '- - choose - -') setIsDisabled(true)
+                    if(onStrike === defVal || firstBowler === defVal) setIsDisabled(true)
                     else setIsDisabled(false)
                 } else {
                     if(numberOfActiveBowlers === 0) {
-                        if(nextBatter === '- - choose - -' || nextBowler === '- - choose - -') setIsDisabled(true)
+                        if(nextBatter === defVal || nextBowler === defVal) setIsDisabled(true)
                         else setIsDisabled(false)
                     } else {
-                        if(nextBatter === '- - choose - -') setIsDisabled(true)
+                        if(nextBatter === defVal) setIsDisabled(true)
                         else setIsDisabled(false)
                     }
                 }
             } else {
                 if(numberOfActiveBowlers === 0) {
-                    if(nextBowler === '- - choose - -') setIsDisabled(true)
+                    if(nextBowler === defVal) setIsDisabled(true)
                     else setIsDisabled(false)
                 } else {
-                    if(ballType === '- - choose - -') setIsDisabled(true)
+                    if(ballType === defVal) setIsDisabled(true)
                     else {
                         if(runsAmount === '' || isNaN(runsAmount)) setIsDisabled(true)
                         else if(isWicket === 'No') setIsDisabled(false)
                         else {
-                            if(wicketType === '- - choose - -') setIsDisabled(true)
+                            if(wicketType === defVal) setIsDisabled(true)
                             if(wicketType === 'bold' || wicketType === 'LBW') setIsDisabled(false)
                             if(wicketType === 'catch') {
-                                if(catcher !== '- - choose - -') setIsDisabled(false)
+                                if(catcher !== defVal) setIsDisabled(false)
                                 else setIsDisabled(true)
                             }
                             if(wicketType === 'run out') {
-                                if(thrower !== '- - choose - -') setIsDisabled(false)
+                                if(thrower !== defVal) setIsDisabled(false)
                                 else setIsDisabled(true)
                             }
                             if(wicketType === 'stumped') {
-                                if(keeper !== '- - choose - -') setIsDisabled(false)
+                                if(keeper !== defVal) setIsDisabled(false)
                                 else setIsDisabled(true)
                             }
                         }
@@ -467,6 +474,15 @@ export default function TackScore() {
                                         })()
                                     }
                                 })
+                                if(wicketType === 'catch') {
+                                    if(changeEnds === 'Yes') {
+                                        players_batting.forEach(player => {
+                                            if(player.status.isBatting) {
+                                                player.status.onStrike = !player.status.onStrike
+                                            }
+                                        })
+                                    }
+                                }
                                 break;
                             case 'run out':
                                 players_batting.forEach(player => {
@@ -892,13 +908,13 @@ export default function TackScore() {
             withCredentials: true
         })
         dispatch(fetch_match(temp))
-        setBallType('- - choose - -')
+        setBallType(defVal)
         setRunsAmount('')
-        setOnStrike('- - choose - -')
-        setNonStrike('- - choose - -')
-        setFirstBowler('- - choose - -')
-        setNextBatter('- - choose - -')
-        setNextBowler('- - choose - -')
+        setOnStrike(defVal)
+        setNonStrike(defVal)
+        setFirstBowler(defVal)
+        setNextBatter(defVal)
+        setNextBowler(defVal)
     } catch(error) {
         console.error(error)
     } finally {
@@ -934,34 +950,34 @@ export default function TackScore() {
                             const curr = data?.innings[data.innings.first.active ? 'first' : 'second']
                             if(numberOfActiveBatters === 0) {
                                 return (<>
-                                    <SelectTag label='choose striker' options={['- - choose - -', ...curr?.current[curr.batting].players.map(i => i.status.name)]} val={onStrike} set={setOnStrike}/>
-                                    <SelectTag label='choose non-striker' options={['- - choose - -', ...curr?.current[curr.batting].players.map(i => i.status.name).filter(name => name !== onStrike)]} val={nonStrike} set={setNonStrike}/>
-                                    <SelectTag label='choose first bowler' options={['- - choose - -', ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={firstBowler} set={setFirstBowler}/>
+                                    <SelectTag label='choose striker' options={[defVal, ...curr?.current[curr.batting].players.map(i => i.status.name)]} val={onStrike} set={setOnStrike}/>
+                                    <SelectTag label='choose non-striker' options={[defVal, ...curr?.current[curr.batting].players.map(i => i.status.name).filter(name => name !== onStrike)]} val={nonStrike} set={setNonStrike}/>
+                                    <SelectTag label='choose first bowler' options={[defVal, ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={firstBowler} set={setFirstBowler}/>
                                 </>)
                             } else if(numberOfActiveBatters === 1) {
                                 return (<>
                                     {numberOfActiveBowlers === 0 ?
-                                        <SelectTag label='choose next bowler' options={['- - choose - -', ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
+                                        <SelectTag label='choose next bowler' options={[defVal, ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
                                         :
                                         <></>
                                     }
-                                    <SelectTag label='choose next batter' options={['- - choose - -', ...curr?.current[curr.batting].players.filter(i => !i.status.isBatting && !i.status.isTaken).map(i => i.status.name)]} val={nextBatter} set={setNextBatter}/>
+                                    <SelectTag label='choose next batter' options={[defVal, ...curr?.current[curr.batting].players.filter(i => !i.status.isBatting && !i.status.isTaken).map(i => i.status.name)]} val={nextBatter} set={setNextBatter}/>
                                 </>)
                             } else {
                                 if(numberOfActiveBowlers === 0) {
                                     return (
-                                        <SelectTag label='choose next bowler' options={['- - choose - -', ...curr?.current[curr.bowling].players.filter(i => !i.status.isBowling).map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
+                                        <SelectTag label='choose next bowler' options={[defVal, ...curr?.current[curr.bowling].players.filter(i => !i.status.isBowling).map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
                                     )
                                 }
                                 else {
                                     return (<>
-                                        <SelectTag label='ball type' options={['- - choose - -', 'normal', 'wide', 'no-ball']} val={ballType} set={setBallType}/>
+                                        <SelectTag label='ball type' options={[defVal, 'normal', 'wide', 'no-ball']} val={ballType} set={setBallType}/>
                                         {(() =>  {
                                             switch (ballType) {
-                                                case '- - choose - -':
+                                                case defVal:
                                                     return (<></>)
                                                 case 'normal':
-                                                    return (<NormalBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, catcher, whoIsOut, thrower, keeper}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setCatcher, setWhoIsOut, setThrower, setKeeper}}/>)
+                                                    return (<NormalBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, catcher ,changeEnds, whoIsOut, thrower, keeper}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setCatcher ,setChangeEnds, setWhoIsOut, setThrower, setKeeper}}/>)
                                                 case 'wide':
                                                     return (<WideBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, whoIsOut, thrower, keeper}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setWhoIsOut, setThrower, setKeeper}}/>)
                                                 case 'no-ball':
@@ -979,31 +995,31 @@ export default function TackScore() {
                             if(numberOfActiveBatters === 0) {
                                 if(curr.current.stats.balls === 0) {
                                     return (<>
-                                        <SelectTag label='choose striker' options={['- - choose - -', ...curr?.current[curr.batting].players.map(i => i.status.name)]} val={onStrike} set={setOnStrike}/>
-                                        <SelectTag label='choose first bowler' options={['- - choose - -', ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={firstBowler} set={setFirstBowler}/>
+                                        <SelectTag label='choose striker' options={[defVal, ...curr?.current[curr.batting].players.map(i => i.status.name)]} val={onStrike} set={setOnStrike}/>
+                                        <SelectTag label='choose first bowler' options={[defVal, ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={firstBowler} set={setFirstBowler}/>
                                     </>)
                                 } else {
                                     return (<>
                                         {numberOfActiveBowlers === 0 ?
-                                            <SelectTag label='choose next bowler' options={['- - choose - -', ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
+                                            <SelectTag label='choose next bowler' options={[defVal, ...curr?.current[curr.bowling].players.map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
                                             :
                                             <></>
                                         }
-                                        <SelectTag label='choose next batter' options={['- - choose - -', ...curr?.current[curr.batting].players.filter(i => !i.status.isBatting && !i.status.isTaken).map(i => i.status.name)]} val={nextBatter} set={setNextBatter}/>
+                                        <SelectTag label='choose next batter' options={[defVal, ...curr?.current[curr.batting].players.filter(i => !i.status.isBatting && !i.status.isTaken).map(i => i.status.name)]} val={nextBatter} set={setNextBatter}/>
                                     </>)
                                 }
                             } else {
                                 if(numberOfActiveBowlers === 0) {
                                     return (
-                                        <SelectTag label='choose next bowler' options={['- - choose - -', ...curr?.current[curr.bowling].players.filter(i => !i.status.isBowling).map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
+                                        <SelectTag label='choose next bowler' options={[defVal, ...curr?.current[curr.bowling].players.filter(i => !i.status.isBowling).map(i => i.status.name)]} val={nextBowler} set={setNextBowler}/>
                                     )
                                 }
                                 else {
                                     return (<>
-                                        <SelectTag label='ball type' options={['- - choose - -', 'normal', 'wide', 'no-ball']} val={ballType} set={setBallType}/>
+                                        <SelectTag label='ball type' options={[defVal, 'normal', 'wide', 'no-ball']} val={ballType} set={setBallType}/>
                                         {(() =>  {
                                             switch (ballType) {
-                                                case '- - choose - -':
+                                                case defVal:
                                                     return (<></>)
                                                 case 'normal':
                                                     return (<NormalBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, catcher, whoIsOut, thrower, keeper}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setCatcher, setWhoIsOut, setThrower, setKeeper}}/>)
