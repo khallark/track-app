@@ -82,7 +82,11 @@ function NormalBall({val, set, data}) {
                                 if(wicketType === 'catch') return (
                                     <>
                                     <SelectTag label='player who catched the ball' options={[defVal, ...data.map(element => element.status.name)]} val={catcher} set={setCatcher}/>
-                                    <SelectTag label='change ends?' options={['No', 'Yes']} val={changeEnds} set={setChangeEnds}/>
+                                    {_data.menOnStrike === 'double' ?
+                                        <SelectTag label='change ends?' options={['No', 'Yes']} val={changeEnds} set={setChangeEnds}/>
+                                        :
+                                        <></>
+                                    }
                                     </>
                                 )
                                 if(wicketType === 'run out') return (
