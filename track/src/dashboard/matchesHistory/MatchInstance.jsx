@@ -35,16 +35,16 @@ export default function MatchInstance({index, _id, name, loc, date, isCompleted,
 
     return (
         <li className={`mt-3 flex border ${theme ? 'border-[#e5e5e5]' : 'border-[#2b2b2b]'} w-[99%] border-l-[3px] ${theme ? 'hover:border-l-[#005fb8]' : 'hover:border-l-[#0078d4]'}`}>
-            <div className={`m-3 700:m-4 w-8 font-[100] text-[1rem] ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} font-robotoSans`}>{index}</div>
+            <div className={`m-3 mr-1 700:m-4 w-8 font-[100] text-[1rem] ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} font-robotoSans`}>{index}</div>
             <div className={`flex flex-col justify-center relative w-full`}>
                 <div className={`relative flex flex-col`}>
-                    <Link className={`cursor-pointer text-[1.3rem] 700:text-[2rem] ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} font-robotoSans font-[100] underline underline-offset-8 ${theme ? 'hover:text-black' : 'hover:text-white'}`} to={`../match-id/${_id}`}>{name}
+                    <Link className={`pt-2 700:pt-2 cursor-pointer text-[1.3rem] 700:text-[1.7rem] ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} font-robotoSans font-[100] hover:underline ${theme ? 'hover:text-black' : 'hover:text-white'}`} to={`../match-id/${_id}`}>{name}
                     {isCompleted ?
-                        <span className=' translate-y-[10px] 700:translate-y-1 scale-[.8] 700:scale-[1] 700:pl-4 inline-flex '><svg className='pt-1' xmlns="http://www.w3.org/2000/svg" fill={theme ? 'green' : '#39FF14'} width="40px" height="40px" viewBox="0 0 256 256" id="Flat">
+                        <span className='translate-y-1 700;translate-y-0 700:scale-[1.4] 700:pl-2 inline-flex'><svg xmlns="http://www.w3.org/2000/svg" fill={theme ? 'green' : '#39FF14'} width="25px" height="25px" viewBox="0 0 256 256" id="Flat">
                             <path d="M103.99951,188.00012a3.98852,3.98852,0,0,1-2.82812-1.17139l-56-55.9956a3.99992,3.99992,0,0,1,5.65625-5.65723l53.17187,53.16748L213.17139,69.1759a3.99992,3.99992,0,0,1,5.65625,5.65723l-112,111.9956A3.98855,3.98855,0,0,1,103.99951,188.00012Z"/>
                         </svg></span>
                     :
-                        <span className={`translate-y-[2px] 700:translate-y-1 ml-2 700:ml-5 inline-flex items-center justify-center h-4 min-h-4 w-4 min-w-4 700:size-6 rounded-full bg-yellow-600`}>
+                        <span className={`translate-y-[2px] 700:translate-y-[2px] ml-1 700:ml-5 inline-flex items-center justify-center h-4 min-h-4 w-4 min-w-4 700:size-6 rounded-full bg-yellow-600`}>
                             <span className={`absolute size-3 700:size-4 rounded-full ${theme ? 'bg-[#ffffff]' : 'bg-[#1f1f1f]'}`}></span>
                         </span>
                     }
