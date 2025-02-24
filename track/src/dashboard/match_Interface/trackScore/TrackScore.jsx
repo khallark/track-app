@@ -1019,7 +1019,7 @@ export default function TackScore() {
                         })()}</>
                     )}
                     <button
-                        className={`animate-showUpFast flex items-center justify-center ${isDisabled ? 'hidden' : ''} w-[135x] 700:w-[148px] h-[35px] my-10 700:mt-5 px-7 py-1 font-robotoSans text-[1rem] 700:text-[1.2rem] ${theme ? 'border-[#d5d5d5]' : 'border-[#3b3b3b]'} ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} border rounded-sm hover:brightness-[.9] active:brightness-[.8]`}
+                        className={`animate-showUpFast flex items-center justify-center ${isDisabled ? 'hidden' : ''} min-w-[135px] w-[135x] 700:w-[148px] h-[35px] my-10 700:mt-5 px-7 py-1 font-robotoSans text-[1rem] 700:text-[1.2rem] ${theme ? 'border-[#d5d5d5]' : 'border-[#3b3b3b]'} ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} border rounded-sm hover:brightness-[.9] active:brightness-[.8]`}
                         onClick={updateData}
                     >
                         {!loading ? 'Proceed →' : <Loading/>}
