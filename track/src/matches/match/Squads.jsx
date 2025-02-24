@@ -69,9 +69,9 @@ export default function Squads() {
                                                 if(pl === null && item.status.name === player.status.name)
                                                     pl = item.status
                                             })
-                                            if(pl.isTaken != '') return `(${pl.isTaken})`
-                                            else if(pl.isBatting) return '(not out)'
-                                            return '(did not bat)'
+                                            if(pl.isTaken != '') return `${pl.isTaken}`
+                                            else if(pl.isBatting) return 'not out'
+                                            return 'did not bat'
                                         })()}
                                     </i>
                                 </h1>
@@ -174,9 +174,9 @@ export default function Squads() {
                                                 if(pl === null && item.status.name === player.status.name)
                                                     pl = item.status
                                             })
-                                            if(pl.isTaken != '') return `(${pl.isTaken})`
-                                            else if(pl.isBatting) return '(not out)'
-                                            return '(did not bat)'
+                                            if(pl.isTaken != '') return `${pl.isTaken}`
+                                            else if(pl.isBatting) return 'not out'
+                                            return 'did not bat'
                                         })()}
                                     </i>
                                 </h1>

@@ -463,7 +463,7 @@ export default function TackScore() {
                                             let s = `b ${bowlerName}`
                                             if(wicketType === 'catch') s += `, c ${catcher}`
                                             if(wicketType === 'Stumped') s += `, stmp ${keeper}`
-                                            return s
+                                            return `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] ` + s
                                         })()
                                     }
                                 })
@@ -477,7 +477,7 @@ export default function TackScore() {
                                         if (isOut) {
                                             player.status.isBatting = false;
                                             player.status.onStrike = false;
-                                            player.status.isTaken = `run out ${thrower}`;
+                                            player.status.isTaken = `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] run out ${thrower}`;
                                         }
                                     }
                                 })
@@ -542,7 +542,7 @@ export default function TackScore() {
                                     && player.status.onStrike) {
                                         player.status.isBatting = false
                                         player.status.onStrike = false
-                                        player.status.isTaken = `b ${bowlerName}, stmp ${keeper}`
+                                        player.status.isTaken = `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] b ${bowlerName}, stmp ${keeper}`
                                     }
                                 })
                                 break;
@@ -555,7 +555,7 @@ export default function TackScore() {
                                         if (isOut) {
                                             player.status.isBatting = false;
                                             player.status.onStrike = false;
-                                            player.status.isTaken = `run out ${thrower}`;
+                                            player.status.isTaken = `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] run out ${thrower}`;
                                         }
                                     }
                                 })
@@ -621,7 +621,7 @@ export default function TackScore() {
                                         if (isOut) {
                                             player.status.isBatting = false;
                                             player.status.onStrike = false;
-                                            player.status.isTaken = `run out ${thrower}`;
+                                            player.status.isTaken = `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] run out ${thrower}`;
                                         }
                                     }
                                 })
@@ -746,7 +746,7 @@ export default function TackScore() {
                                             let s = `b ${bowlerName}`
                                             if(wicketType === 'catch') s += `, c ${catcher}`
                                             if(wicketType === 'Stumped') s += `, stmp ${keeper}`
-                                            return s
+                                            return `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] ` + s
                                         })()
                                     }
                                 })
@@ -755,7 +755,7 @@ export default function TackScore() {
                                 players_batting.forEach(player => {
                                     if(player.status.isBatting) {
                                         player.status.isBatting = false
-                                        player.status.isTaken = `run out ${thrower}`
+                                        player.status.isTaken = `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] run out ${thrower}`
                                     }
                                 })
                                 break;
@@ -810,7 +810,7 @@ export default function TackScore() {
                                 players_batting.forEach(player => {
                                     if(player.status.isBatting) {
                                         player.status.isBatting = false
-                                        player.status.isTaken = `run out ${thrower}`
+                                        player.status.isTaken = `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] run out ${thrower}`
                                     }
                                 })
                                 break;
@@ -865,7 +865,7 @@ export default function TackScore() {
                                 players_batting.forEach(player => {
                                     if(player.status.isBatting) {
                                         player.status.isBatting = false
-                                        player.status.isTaken = `run out ${thrower}`
+                                        player.status.isTaken = `[${Math.floor(stats.balls / 6)}.${stats.balls % 6}] run out ${thrower}`
                                     }
                                 })
                                 break;
