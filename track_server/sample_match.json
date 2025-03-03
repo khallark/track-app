@@ -1,0 +1,1727 @@
+{
+  "_id": {
+    "$oid": "67c04b2e5ba235a405714f97"
+  },
+  "name": "Pakistan vs India, Group A, Champions Trophy 2025",
+  "location": "Dubai International Cricket Stadium (DICS), Dubai",
+  "heldBy": "67bae901a824b0d02e817f29",
+  "team1": "India",
+  "team2": "Pakistan ",
+  "numOvers": 50,
+  "tossWon": "Pakistan ",
+  "tossDecision": "batting",
+  "menOnStrike": "double",
+  "isCompleted": false,
+  "innings": {
+    "first": {
+      "batting": "team2",
+      "bowling": "team1",
+      "overs": [
+        [
+          "Mohammed Shami",
+          "0",
+          "0",
+          "Wd(0)",
+          "Wd(0)",
+          "Wd(0)",
+          "0",
+          "1",
+          "0",
+          "Wd(0)",
+          "Wd(0)",
+          "0"
+        ],
+        [
+          "Harshit Rana",
+          "1",
+          "0",
+          "Wd(0)",
+          "0",
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "Mohammed Shami",
+          "2",
+          "0",
+          "0",
+          "2",
+          "0",
+          "0"
+        ],
+        [
+          "Harshit Rana",
+          "0",
+          "0",
+          "4",
+          "0",
+          "4",
+          "0"
+        ],
+        [
+          "Mohammed Shami",
+          "2",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "Harshit Rana",
+          "0",
+          "0",
+          "0",
+          "0",
+          "Wd(0)",
+          "0",
+          "0"
+        ],
+        [
+          "Hardik Pandya ",
+          "0",
+          "0",
+          "0",
+          "Wd(0)",
+          "0",
+          "4",
+          "0"
+        ],
+        [
+          "Axar Patel ",
+          "1",
+          "0",
+          "0",
+          "4",
+          "1",
+          "0"
+        ],
+        [
+          "Hardik Pandya ",
+          "4",
+          "Wckt",
+          "4",
+          "0",
+          "0",
+          "2"
+        ],
+        [
+          "Kuldeep Yadav",
+          "0"
+        ]
+      ],
+      "runs_balls": [
+        {
+          "runs": 0,
+          "balls": 1
+        },
+        {
+          "runs": 0,
+          "balls": 2
+        },
+        {
+          "runs": 3,
+          "balls": 3
+        },
+        {
+          "runs": 4,
+          "balls": 4
+        },
+        {
+          "runs": 4,
+          "balls": 5
+        },
+        {
+          "runs": 6,
+          "balls": 6
+        },
+        {
+          "runs": 7,
+          "balls": 7
+        },
+        {
+          "runs": 7,
+          "balls": 8
+        },
+        {
+          "runs": 8,
+          "balls": 9
+        },
+        {
+          "runs": 8,
+          "balls": 10
+        },
+        {
+          "runs": 10,
+          "balls": 11
+        },
+        {
+          "runs": 10,
+          "balls": 12
+        },
+        {
+          "runs": 12,
+          "balls": 13
+        },
+        {
+          "runs": 12,
+          "balls": 14
+        },
+        {
+          "runs": 12,
+          "balls": 15
+        },
+        {
+          "runs": 14,
+          "balls": 16
+        },
+        {
+          "runs": 14,
+          "balls": 17
+        },
+        {
+          "runs": 14,
+          "balls": 18
+        },
+        {
+          "runs": 14,
+          "balls": 19
+        },
+        {
+          "runs": 14,
+          "balls": 20
+        },
+        {
+          "runs": 18,
+          "balls": 21
+        },
+        {
+          "runs": 18,
+          "balls": 22
+        },
+        {
+          "runs": 22,
+          "balls": 23
+        },
+        {
+          "runs": 22,
+          "balls": 24
+        },
+        {
+          "runs": 24,
+          "balls": 25
+        },
+        {
+          "runs": 24,
+          "balls": 26
+        },
+        {
+          "runs": 24,
+          "balls": 27
+        },
+        {
+          "runs": 24,
+          "balls": 28
+        },
+        {
+          "runs": 25,
+          "balls": 29
+        },
+        {
+          "runs": 25,
+          "balls": 30
+        },
+        {
+          "runs": 25,
+          "balls": 31
+        },
+        {
+          "runs": 25,
+          "balls": 32
+        },
+        {
+          "runs": 25,
+          "balls": 33
+        },
+        {
+          "runs": 25,
+          "balls": 34
+        },
+        {
+          "runs": 26,
+          "balls": 35
+        },
+        {
+          "runs": 26,
+          "balls": 36
+        },
+        {
+          "runs": 26,
+          "balls": 37
+        },
+        {
+          "runs": 26,
+          "balls": 38
+        },
+        {
+          "runs": 26,
+          "balls": 39
+        },
+        {
+          "runs": 27,
+          "balls": 40
+        },
+        {
+          "runs": 31,
+          "balls": 41
+        },
+        {
+          "runs": 31,
+          "balls": 42
+        },
+        {
+          "runs": 32,
+          "balls": 43
+        },
+        {
+          "runs": 32,
+          "balls": 44
+        },
+        {
+          "runs": 32,
+          "balls": 45
+        },
+        {
+          "runs": 36,
+          "balls": 46
+        },
+        {
+          "runs": 37,
+          "balls": 47
+        },
+        {
+          "runs": 37,
+          "balls": 48
+        },
+        {
+          "runs": 41,
+          "balls": 49
+        },
+        {
+          "runs": 41,
+          "balls": 50
+        },
+        {
+          "runs": 45,
+          "balls": 51
+        },
+        {
+          "runs": 45,
+          "balls": 52
+        },
+        {
+          "runs": 45,
+          "balls": 53
+        },
+        {
+          "runs": 47,
+          "balls": 54
+        },
+        {
+          "runs": 47,
+          "balls": 55
+        }
+      ],
+      "current": {
+        "team1": {
+          "name": "India",
+          "numPlayers": 11,
+          "players": [
+            {
+              "status": {
+                "registered": false,
+                "_id": "319ac105-74ec-4a44-89ce-128e4ddd2f01",
+                "name": "Rohit Sharma",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "e0de3146-94eb-4ff0-bcbd-8c08bb5f7b65",
+                "name": "Shubhman Gill",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "58676adb-5e3d-459d-a112-37d477692621",
+                "name": "Viral Kohli",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "da8dd88e-63d7-4ffb-a2ce-65d16e5ef97c",
+                "name": "Shreyas Iyer",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "7af21489-774a-45c0-a58e-eecbf26a9200",
+                "name": "Hardik Pandya ",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 1,
+                "runs_conceded": 10,
+                "fours_conceded": 2,
+                "sixes_conceded": 0,
+                "balls_bowled": 12,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 8,
+                "strike_rate": 12,
+                "economy_rate": 5
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "1ba477d8-ed6f-4346-ad3e-0ad968c50a4f",
+                "name": "Axar Patel ",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 6,
+                "fours_conceded": 1,
+                "sixes_conceded": 0,
+                "balls_bowled": 6,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 3,
+                "strike_rate": 0,
+                "economy_rate": 6
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "3665a053-8e44-4e6e-a194-5e3089a03c5a",
+                "name": "KL Rahul",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "f8c6c523-621d-40e7-a916-a93a61206259",
+                "name": "Ravindra Jadeja",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "94be5e2f-17fd-4b38-bd0c-552a1ff9d2dc",
+                "name": "Harshit Rana",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 11,
+                "fours_conceded": 2,
+                "sixes_conceded": 0,
+                "balls_bowled": 18,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 14,
+                "strike_rate": 0,
+                "economy_rate": 3.666666666666667
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "b895de09-f8bf-4a99-9ff6-c91a24f54edc",
+                "name": "Mohammed Shami",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 8,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 18,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 13,
+                "strike_rate": 0,
+                "economy_rate": 2.6666666666666665
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "ec6f058e-81c1-4478-b411-2434050f4529",
+                "name": "Kuldeep Yadav",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": true,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 1,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 1,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            }
+          ]
+        },
+        "team2": {
+          "name": "Pakistan ",
+          "numPlayers": 11,
+          "players": [
+            {
+              "status": {
+                "registered": false,
+                "_id": "adb63514-591b-4b50-827e-193b9f15925e",
+                "name": "Imam-ul-Haq",
+                "job": "batter",
+                "isBatting": true,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": true
+              },
+              "batting": {
+                "runs_scored": 10,
+                "balls_played": 25,
+                "strike_rate": 40,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "8f4df648-569c-4a41-8227-5678553b1d92",
+                "name": "Babar Azam",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "[8.2] b Hardik Pandya , c KL Rahul",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 23,
+                "balls_played": 26,
+                "strike_rate": 88.46153846153845,
+                "total_fours": 5,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "31302b4b-e6af-4694-8682-f7898ce09117",
+                "name": "Saud Shakeel",
+                "job": "batter",
+                "isBatting": true,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 2,
+                "balls_played": 4,
+                "strike_rate": 50,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "a1eeff41-19ae-4b29-a0b6-07f6daffc1c5",
+                "name": "Mohammad Rizwan",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "baf1e00e-50b2-46fe-9ba0-84667f790583",
+                "name": "Salman Agha",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "814ef57e-8452-4593-bfd1-06c01c16bec0",
+                "name": "Tayyab Tahir",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "ba816c3e-4724-415e-9e03-51a19ac2a768",
+                "name": "Khushdil Shah",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "e58bbcb6-a9a9-44c4-b76b-4364cf09262d",
+                "name": "Shaheen Shah Afridi",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "28e454a8-f005-4c14-99a0-fcfbe0c8208c",
+                "name": "Naseem Shah",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "2b54e2b7-e501-4930-b1db-3e6d37bdca93",
+                "name": "Haris Rauf",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "f6c12b44-2fb4-434d-9f6b-85189520e1a7",
+                "name": "Abrar Ahmed",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            }
+          ]
+        },
+        "stats": {
+          "runs": 47,
+          "balls": 55,
+          "wickets": 1,
+          "crr": 5.127272727272727,
+          "fours": 6,
+          "sixes": 0,
+          "extras": {
+            "wides": 8,
+            "byes": 4,
+            "noBalls": 0
+          }
+        }
+      },
+      "active": true
+    },
+    "second": {
+      "batting": "team1",
+      "bowling": "team2",
+      "overs": [],
+      "runs_balls": [],
+      "current": {
+        "team1": {
+          "name": "India",
+          "numPlayers": 11,
+          "players": [
+            {
+              "status": {
+                "registered": false,
+                "_id": "319ac105-74ec-4a44-89ce-128e4ddd2f01",
+                "name": "Rohit Sharma",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "e0de3146-94eb-4ff0-bcbd-8c08bb5f7b65",
+                "name": "Shubhman Gill",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "58676adb-5e3d-459d-a112-37d477692621",
+                "name": "Viral Kohli",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "da8dd88e-63d7-4ffb-a2ce-65d16e5ef97c",
+                "name": "Shreyas Iyer",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "7af21489-774a-45c0-a58e-eecbf26a9200",
+                "name": "Hardik Pandya ",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "1ba477d8-ed6f-4346-ad3e-0ad968c50a4f",
+                "name": "Axar Patel ",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "3665a053-8e44-4e6e-a194-5e3089a03c5a",
+                "name": "KL Rahul",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "f8c6c523-621d-40e7-a916-a93a61206259",
+                "name": "Ravindra Jadeja",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "94be5e2f-17fd-4b38-bd0c-552a1ff9d2dc",
+                "name": "Harshit Rana",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "b895de09-f8bf-4a99-9ff6-c91a24f54edc",
+                "name": "Mohammed Shami",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "ec6f058e-81c1-4478-b411-2434050f4529",
+                "name": "Kuldeep Yadav",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            }
+          ]
+        },
+        "team2": {
+          "name": "Pakistan ",
+          "numPlayers": 11,
+          "players": [
+            {
+              "status": {
+                "registered": false,
+                "_id": "adb63514-591b-4b50-827e-193b9f15925e",
+                "name": "Imam-ul-Haq",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "8f4df648-569c-4a41-8227-5678553b1d92",
+                "name": "Babar Azam",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "31302b4b-e6af-4694-8682-f7898ce09117",
+                "name": "Saud Shakeel",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "a1eeff41-19ae-4b29-a0b6-07f6daffc1c5",
+                "name": "Mohammad Rizwan",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "baf1e00e-50b2-46fe-9ba0-84667f790583",
+                "name": "Salman Agha",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "814ef57e-8452-4593-bfd1-06c01c16bec0",
+                "name": "Tayyab Tahir",
+                "job": "batter",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "ba816c3e-4724-415e-9e03-51a19ac2a768",
+                "name": "Khushdil Shah",
+                "job": "all rounder",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "e58bbcb6-a9a9-44c4-b76b-4364cf09262d",
+                "name": "Shaheen Shah Afridi",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "28e454a8-f005-4c14-99a0-fcfbe0c8208c",
+                "name": "Naseem Shah",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "2b54e2b7-e501-4930-b1db-3e6d37bdca93",
+                "name": "Haris Rauf",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "f6c12b44-2fb4-434d-9f6b-85189520e1a7",
+                "name": "Abrar Ahmed",
+                "job": "bowler",
+                "isBatting": false,
+                "isBowling": false,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 0,
+                "runs_conceded": 0,
+                "fours_conceded": 0,
+                "sixes_conceded": 0,
+                "balls_bowled": 0,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 0,
+                "strike_rate": 0,
+                "economy_rate": 0
+              }
+            }
+          ]
+        },
+        "stats": {
+          "runs": 0,
+          "balls": 0,
+          "wickets": 0,
+          "crr": 0,
+          "fours": 0,
+          "sixes": 0,
+          "extras": {
+            "wides": 0,
+            "byes": 0,
+            "noBalls": 0
+          }
+        }
+      },
+      "active": false
+    }
+  },
+  "winTeam": "",
+  "LooseTeam": "",
+  "date": {
+    "$date": "2025-02-27T11:23:26.924Z"
+  },
+  "partnerShips": [],
+  "__v": 0
+}

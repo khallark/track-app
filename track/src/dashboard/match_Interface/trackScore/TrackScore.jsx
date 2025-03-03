@@ -34,7 +34,7 @@ function SelectTag({label, options, val, set}) {
     )
 }
 
-function InputTag({label, val, set, isWicket, wicketType}) {
+function InputTag({label, val, set, isWicket, wicketType, runsAmountErr}) {
     const theme = useSelector(state => state.globals.theme)
     return (
         <div className={`flex w-full gap-2 items-center mb-3`}>
@@ -51,7 +51,7 @@ function InputTag({label, val, set, isWicket, wicketType}) {
                 autoFocus
                 type="text"
                 placeholder={`Enter here...`}
-                className={`font-robotoSans px-3 py-1 ${theme ? 'bg-[#d5d5d5]' : 'bg-[#313131]'} ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} text-[.7rem] 700:text-[.9rem] flex-grow rounded-sm border ${theme ? 'border-[#d5d5d5]' : 'border-[#313131]'} ${theme ? 'hover:bg-[#EEEEEE]' : 'hover:bg-[#363636]'} ${theme ? 'focus:border-[#005fb8]' : 'focus:border-[#0078d4]'} outline-none`}
+                className={`font-robotoSans px-3 py-1 ${theme ? 'bg-[#d5d5d5]' : 'bg-[#313131]'} ${theme ? 'text-[#3b3b3b]' : 'text-[#CCCCCC]'} text-[.7rem] 700:text-[.9rem] flex-grow rounded-sm ${theme ? 'hover:bg-[#EEEEEE]' : 'hover:bg-[#363636]'} border ${runsAmountErr ? 'border-red-600' : (theme ? 'border-[#d5d5d5] focus:border-[#005fb8]' : 'border-[#313131] focus:border-[#0078d4]')} outline-none`}
                 value={val}
                 onChange={(e) => {
                     if(isWicket === 'Yes' && wicketType !== defVal && wicketType !== 'run out') set('0')
@@ -64,13 +64,12 @@ function InputTag({label, val, set, isWicket, wicketType}) {
 
 function NormalBall({val, set, data}) {
     const _data = useSelector(state => state.dashboard.data)
-    const { runsAmount, runsAccounted, isWicket, wicketType, catcher, changeEnds, whoIsOut, thrower, keeper } = val
+    const { runsAmount, runsAccounted, isWicket, wicketType, catcher, changeEnds, whoIsOut, thrower, keeper, runsAmountErr } = val
     const { setRunsAmount, setRunsAccounted, setIsWicket, setWicketType, setCatcher, setChangeEnds, setWhoIsOut, setThrower, setKeeper } = set
-
     return (
         <>
             <SelectTag label='runs were' options={['made by batsman', 'byes']} val={runsAccounted} set={setRunsAccounted}/>
-            <InputTag label='runs amount' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType}/>
+            <InputTag label='runs amount' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType} runsAmountErr={runsAmountErr}/>
             <SelectTag label='wicket taken?' options={['No', 'Yes']} val={isWicket} set={setIsWicket}/>
             {(() => {
                 if(isWicket === defVal) return (<></>)
@@ -92,11 +91,15 @@ function NormalBall({val, set, data}) {
                                 if(wicketType === 'run out') return (
                                     <>
                                         {_data.menOnStrike === 'double' ?
+                                            <>
                                             <SelectTag label='who is out' options={[defVal, 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
+                                            <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
+                                            <SelectTag label='change ends?' options={['No', 'Yes']} val={changeEnds} set={setChangeEnds}/>
+                                            </>
                                             :
                                             <></>
                                         }
-                                        <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
+                                        
                                     </>
                                 )
                                 if(wicketType === 'stumped') return (<SelectTag label='keeper name' options={[defVal, ...data.map(element => element.status.name)]} val={keeper} set={setKeeper}/>)
@@ -111,11 +114,11 @@ function NormalBall({val, set, data}) {
 
 function WideBall({val, set, data}) {
     const _data = useSelector(state => state.dashboard.data)
-    const { runsAmount, isWicket, wicketType, whoIsOut, thrower, keeper } = val
-    const { setRunsAmount, setIsWicket, setWicketType, setWhoIsOut, setThrower, setKeeper } = set
+    const { runsAmount, isWicket, wicketType, whoIsOut, thrower, changeEnds, keeper, runsAmountErr } = val
+    const { setRunsAmount, setIsWicket, setWicketType, setWhoIsOut, setThrower, setChangeEnds, setKeeper } = set
     return (
         <>
-            <InputTag label='runs amount from byes' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType}/>
+            <InputTag label='runs amount from byes' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType} runsAmountErr={runsAmountErr}/>
             <SelectTag label='wicket taken?' options={['No', 'Yes']} val={isWicket} set={setIsWicket}/>
             {(() => {
                 if(isWicket === defVal) return (<></>)
@@ -128,6 +131,12 @@ function WideBall({val, set, data}) {
                                 if(wicketType === 'run out' && _data.menOnStrike === 'double') return (
                                     <>
                                         <SelectTag label='who is out' options={[defVal, 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
+                                        <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
+                                        <SelectTag label='change ends?' options={['No', 'Yes']} val={changeEnds} set={setChangeEnds}/>
+                                    </>
+                                )
+                                if(wicketType === 'run out' && _data.menOnStrike === 'single') return (
+                                    <>
                                         <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
                                     </>
                                 )
@@ -143,12 +152,12 @@ function WideBall({val, set, data}) {
 
 function NoBall({val, set, data}) {
     const _data = useSelector(state => state.dashboard.data)
-    const { runsAmount, runsAccounted, isWicket, wicketType, whoIsOut, thrower, keeper } = val
-    const { setRunsAmount, setRunsAccounted, setIsWicket, setWicketType, setWhoIsOut, setThrower, setKeeper } = set
+    const { runsAmount, runsAccounted, isWicket, wicketType, whoIsOut, thrower, changeEnds, keeper, runsAmountErr } = val
+    const { setRunsAmount, setRunsAccounted, setIsWicket, setWicketType, setWhoIsOut, setThrower, setChangeEnds, setKeeper } = set
     return (
         <>
             <SelectTag label='runs were' options={['made by batsman', 'byes']} val={runsAccounted} set={setRunsAccounted}/>
-            <InputTag label='runs amount' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType}/>
+            <InputTag label='runs amount' val={runsAmount} set={setRunsAmount} isWicket={isWicket} wicketType={wicketType} runsAmountErr={runsAmountErr}/>
             <SelectTag label='wicket taken?' options={['No', 'Yes']} val={isWicket} set={setIsWicket}/>
             {(() => {
                 if(isWicket === defVal) return (<></>)
@@ -161,6 +170,12 @@ function NoBall({val, set, data}) {
                                 if(wicketType === 'run out' && _data.menOnStrike === 'double') return (
                                     <>
                                         <SelectTag label='who is out' options={[defVal, 'on-striker', 'non-striker']} val={whoIsOut} set={setWhoIsOut}/>
+                                        <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
+                                        <SelectTag label='change ends?' options={['No', 'Yes']} val={changeEnds} set={setChangeEnds}/>
+                                    </>
+                                )
+                                if(wicketType === 'run out' && _data.menOnStrike === 'single') return (
+                                    <>
                                         <SelectTag label='thrower name' options={[defVal, ...data.map(element => element.status.name)]} val={thrower} set={setThrower}/>
                                     </>
                                 )
@@ -181,6 +196,7 @@ export default function TackScore() {
     const [ballType, setBallType] = useState(defVal)
     const [runsAccounted, setRunsAccounted] = useState('made by batsman')
     const [runsAmount, setRunsAmount] = useState('')
+    const [runsAmountErr, setRunsAmountErr] = useState(false)
     const [isWicket, setIsWicket] = useState('No')
     const [wicketType, setWicketType] = useState(defVal)
     const [catcher, setCatcher] = useState(defVal) // catch
@@ -218,6 +234,10 @@ export default function TackScore() {
         setThrower(defVal)
         setKeeper(defVal)
     }, [wicketType])
+
+    useEffect(() => {
+        setRunsAmountErr(false)
+    }, [runsAmount])
 
     const [numberOfActiveBatters, setNumberOfActiveBatters] = useState(0)
     const [numberOfActiveBowlers, setNumberOfActiveBowlers] = useState(0)
@@ -325,6 +345,10 @@ export default function TackScore() {
     const [loading, setLoading] = useState(false)
     const updateData = async () => {
     try {
+        if(!runsAmount || isNaN(runsAmount)) {
+            setRunsAmountErr(true)
+            return
+        }
         setLoading(true)
         const temp = JSON.parse(JSON.stringify(data))
 
@@ -501,6 +525,13 @@ export default function TackScore() {
                                         }
                                     }
                                 })
+                                if(changeEnds === 'Yes') {
+                                    players_batting.forEach(player => {
+                                        if(player.status.isBatting) {
+                                            player.status.onStrike = !player.status.onStrike
+                                        }
+                                    })
+                                }
                                 break;
                             default:
                                 break;
@@ -579,6 +610,13 @@ export default function TackScore() {
                                         }
                                     }
                                 })
+                                if(changeEnds === 'Yes') {
+                                    players_batting.forEach(player => {
+                                        if(player.status.isBatting) {
+                                            player.status.onStrike = !player.status.onStrike
+                                        }
+                                    })
+                                }
                                 break;
                             default:
                                 break;
@@ -645,6 +683,13 @@ export default function TackScore() {
                                         }
                                     }
                                 })
+                                if(changeEnds === 'Yes') {
+                                    players_batting.forEach(player => {
+                                        if(player.status.isBatting) {
+                                            player.status.onStrike = !player.status.onStrike
+                                        }
+                                    })
+                                }
                                 break;
                             default:
                                 break;
@@ -925,7 +970,7 @@ export default function TackScore() {
         setLoading(false)
     }
     }
-
+ 
 
     return (
         <div className={`overflow-hidden h-full w-full min-w-[360px]`}>
@@ -1021,16 +1066,16 @@ export default function TackScore() {
                                 else {
                                     return (<>
                                         <SelectTag label='ball type' options={[defVal, 'normal', 'wide', 'no-ball']} val={ballType} set={setBallType}/>
-                                        {(() =>  {
+                                        {(() => {
                                             switch (ballType) {
                                                 case defVal:
                                                     return (<></>)
                                                 case 'normal':
-                                                    return (<NormalBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, catcher, whoIsOut, thrower, keeper}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setCatcher, setWhoIsOut, setThrower, setKeeper}}/>)
+                                                    return (<NormalBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, catcher, whoIsOut, thrower, keeper, runsAmountErr}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setCatcher, setWhoIsOut, setThrower, setKeeper}}/>)
                                                 case 'wide':
-                                                    return (<WideBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, whoIsOut, thrower, keeper}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setWhoIsOut, setThrower, setKeeper}}/>)
+                                                    return (<WideBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, whoIsOut, thrower, changeEnds, keeper, runsAmountErr}} set={{setRunsAccounted, setIsWicket, setWicketType, setRunsAmount, setWhoIsOut, setThrower, setChangeEnds, setKeeper}}/>)
                                                 case 'no-ball':
-                                                    return (<NoBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, whoIsOut, thrower, keeper}} set={{setRunsAccounted ,setIsWicket, setWicketType, setRunsAmount, setWhoIsOut, setThrower, setKeeper}}/>)
+                                                    return (<NoBall data={curr?.current[curr.bowling].players} val={{runsAccounted, isWicket, wicketType, runsAmount, whoIsOut, thrower, changeEnds, keeper, runsAmountErr}} set={{setRunsAccounted ,setIsWicket, setWicketType, setRunsAmount, setWhoIsOut, setThrower, setChangeEnds, setKeeper}}/>)
                                             }
                                         })()}
                                     </>)
