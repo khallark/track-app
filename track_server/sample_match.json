@@ -325,7 +325,19 @@
         ],
         [
           "Axar Patel ",
+          "1",
+          "Wckt",
+          "0",
+          "1",
+          "1",
           "1"
+        ],
+        [
+          "Hardik Pandya ",
+          "1",
+          "0",
+          "4",
+          "0"
         ]
       ],
       "runs_balls": [
@@ -1124,6 +1136,42 @@
         {
           "runs": 151,
           "balls": 199
+        },
+        {
+          "runs": 151,
+          "balls": 200
+        },
+        {
+          "runs": 151,
+          "balls": 201
+        },
+        {
+          "runs": 152,
+          "balls": 202
+        },
+        {
+          "runs": 153,
+          "balls": 203
+        },
+        {
+          "runs": 154,
+          "balls": 204
+        },
+        {
+          "runs": 155,
+          "balls": 205
+        },
+        {
+          "runs": 155,
+          "balls": 206
+        },
+        {
+          "runs": 159,
+          "balls": 207
+        },
+        {
+          "runs": 159,
+          "balls": 208
         }
       ],
       "current": {
@@ -1258,6 +1306,36 @@
                 "name": "Hardik Pandya ",
                 "job": "all rounder",
                 "isBatting": false,
+                "isBowling": true,
+                "isTaken": "",
+                "onStrike": false
+              },
+              "batting": {
+                "runs_scored": 0,
+                "balls_played": 0,
+                "strike_rate": 0,
+                "total_fours": 0,
+                "total_sixes": 0
+              },
+              "bowling": {
+                "wickets_taken": 1,
+                "runs_conceded": 28,
+                "fours_conceded": 3,
+                "sixes_conceded": 0,
+                "balls_bowled": 46,
+                "maiden_overs_bowled": 0,
+                "dot_balls_bowled": 27,
+                "strike_rate": 46,
+                "economy_rate": 3.6521739130434785
+              }
+            },
+            {
+              "status": {
+                "registered": false,
+                "_id": "1ba477d8-ed6f-4346-ad3e-0ad968c50a4f",
+                "name": "Axar Patel ",
+                "job": "all rounder",
+                "isBatting": false,
                 "isBowling": false,
                 "isTaken": "",
                 "onStrike": false
@@ -1271,44 +1349,14 @@
               },
               "bowling": {
                 "wickets_taken": 1,
-                "runs_conceded": 23,
+                "runs_conceded": 27,
                 "fours_conceded": 2,
                 "sixes_conceded": 0,
-                "balls_bowled": 42,
+                "balls_bowled": 36,
                 "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 25,
-                "strike_rate": 42,
-                "economy_rate": 3.285714285714286
-              }
-            },
-            {
-              "status": {
-                "registered": false,
-                "_id": "1ba477d8-ed6f-4346-ad3e-0ad968c50a4f",
-                "name": "Axar Patel ",
-                "job": "all rounder",
-                "isBatting": false,
-                "isBowling": true,
-                "isTaken": "",
-                "onStrike": false
-              },
-              "batting": {
-                "runs_scored": 0,
-                "balls_played": 0,
-                "strike_rate": 0,
-                "total_fours": 0,
-                "total_sixes": 0
-              },
-              "bowling": {
-                "wickets_taken": 0,
-                "runs_conceded": 24,
-                "fours_conceded": 2,
-                "sixes_conceded": 0,
-                "balls_bowled": 31,
-                "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 14,
-                "strike_rate": 0,
-                "economy_rate": 4.64516129032258
+                "dot_balls_bowled": 16,
+                "strike_rate": 36,
+                "economy_rate": 4.5
               }
             },
             {
@@ -1536,13 +1584,13 @@
                 "isBatting": true,
                 "isBowling": false,
                 "isTaken": "",
-                "onStrike": false
+                "onStrike": true
               },
               "batting": {
-                "runs_scored": 57,
-                "balls_played": 72,
-                "strike_rate": 79.16666666666666,
-                "total_fours": 4,
+                "runs_scored": 62,
+                "balls_played": 76,
+                "strike_rate": 81.57894736842105,
+                "total_fours": 5,
                 "total_sixes": 0
               },
               "bowling": {
@@ -1563,15 +1611,15 @@
                 "_id": "a1eeff41-19ae-4b29-a0b6-07f6daffc1c5",
                 "name": "Mohammad Rizwan",
                 "job": "batter",
-                "isBatting": true,
+                "isBatting": false,
                 "isBowling": false,
-                "isTaken": "",
-                "onStrike": true
+                "isTaken": "[33.2] b Axar Patel ",
+                "onStrike": false
               },
               "batting": {
                 "runs_scored": 46,
-                "balls_played": 75,
-                "strike_rate": 61.33333333333333,
+                "balls_played": 76,
+                "strike_rate": 60.526315789473685,
                 "total_fours": 3,
                 "total_sixes": 0
               },
@@ -1593,15 +1641,15 @@
                 "_id": "baf1e00e-50b2-46fe-9ba0-84667f790583",
                 "name": "Salman Agha",
                 "job": "all rounder",
-                "isBatting": false,
+                "isBatting": true,
                 "isBowling": false,
                 "isTaken": "",
                 "onStrike": false
               },
               "batting": {
-                "runs_scored": 0,
-                "balls_played": 0,
-                "strike_rate": 0,
+                "runs_scored": 3,
+                "balls_played": 4,
+                "strike_rate": 75,
                 "total_fours": 0,
                 "total_sixes": 0
               },
@@ -1800,11 +1848,11 @@
           ]
         },
         "stats": {
-          "runs": 151,
-          "balls": 199,
-          "wickets": 2,
-          "crr": 4.552763819095477,
-          "fours": 13,
+          "runs": 159,
+          "balls": 208,
+          "wickets": 3,
+          "crr": 4.586538461538462,
+          "fours": 14,
           "sixes": 0,
           "extras": {
             "wides": 9,

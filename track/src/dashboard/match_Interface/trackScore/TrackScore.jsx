@@ -419,6 +419,7 @@ export default function TackScore() {
                     })
                 } else {
                     if(!runsAmount || isNaN(runsAmount)) {
+                        console.log('yo')
                         setRunsAmountErr(true)
                         return
                     }
