@@ -108,7 +108,224 @@
         ],
         [
           "Kuldeep Yadav",
+          "0",
+          "Wckt",
+          "1",
+          "4",
+          "0",
           "0"
+        ],
+        [
+          "Hardik Pandya ",
+          "0",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "Mohammed Shami",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Hardik Pandya ",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "Mohammed Shami",
+          "0",
+          "0",
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "Hardik Pandya ",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "Axar Patel ",
+          "4",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "Hardik Pandya ",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "Axar Patel ",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "Harshit Rana",
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "Kuldeep Yadav",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "Harshit Rana",
+          "1",
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "Kuldeep Yadav",
+          "1",
+          "1",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "Ravindra Jadeja",
+          "0",
+          "0",
+          "0",
+          "3",
+          "0",
+          "1"
+        ],
+        [
+          "Kuldeep Yadav",
+          "0",
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "Ravindra Jadeja",
+          "1",
+          "4",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "Kuldeep Yadav",
+          "0",
+          "0",
+          "4",
+          "0",
+          "0",
+          "4"
+        ],
+        [
+          "Ravindra Jadeja",
+          "4",
+          "2",
+          "1",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "Mohammed Shami",
+          "0",
+          "1",
+          "1",
+          "0",
+          "1",
+          "2"
+        ],
+        [
+          "Ravindra Jadeja",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "Axar Patel ",
+          "0",
+          "1",
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "Ravindra Jadeja",
+          "1",
+          "4",
+          "1",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "Axar Patel ",
+          "0",
+          "1",
+          "1",
+          "2",
+          "0",
+          "1"
+        ],
+        [
+          "Hardik Pandya ",
+          "Wd(0)",
+          "1",
+          "0",
+          "1",
+          "1",
+          "2",
+          "2"
+        ],
+        [
+          "Axar Patel ",
+          "1"
         ]
       ],
       "runs_balls": [
@@ -331,6 +548,582 @@
         {
           "runs": 47,
           "balls": 55
+        },
+        {
+          "runs": 47,
+          "balls": 56
+        },
+        {
+          "runs": 48,
+          "balls": 57
+        },
+        {
+          "runs": 52,
+          "balls": 58
+        },
+        {
+          "runs": 52,
+          "balls": 59
+        },
+        {
+          "runs": 52,
+          "balls": 60
+        },
+        {
+          "runs": 52,
+          "balls": 61
+        },
+        {
+          "runs": 53,
+          "balls": 62
+        },
+        {
+          "runs": 54,
+          "balls": 63
+        },
+        {
+          "runs": 55,
+          "balls": 64
+        },
+        {
+          "runs": 55,
+          "balls": 65
+        },
+        {
+          "runs": 55,
+          "balls": 66
+        },
+        {
+          "runs": 56,
+          "balls": 67
+        },
+        {
+          "runs": 57,
+          "balls": 68
+        },
+        {
+          "runs": 58,
+          "balls": 69
+        },
+        {
+          "runs": 58,
+          "balls": 70
+        },
+        {
+          "runs": 58,
+          "balls": 71
+        },
+        {
+          "runs": 58,
+          "balls": 72
+        },
+        {
+          "runs": 58,
+          "balls": 73
+        },
+        {
+          "runs": 58,
+          "balls": 74
+        },
+        {
+          "runs": 58,
+          "balls": 75
+        },
+        {
+          "runs": 59,
+          "balls": 76
+        },
+        {
+          "runs": 59,
+          "balls": 77
+        },
+        {
+          "runs": 59,
+          "balls": 78
+        },
+        {
+          "runs": 59,
+          "balls": 79
+        },
+        {
+          "runs": 59,
+          "balls": 80
+        },
+        {
+          "runs": 60,
+          "balls": 81
+        },
+        {
+          "runs": 61,
+          "balls": 82
+        },
+        {
+          "runs": 61,
+          "balls": 83
+        },
+        {
+          "runs": 61,
+          "balls": 84
+        },
+        {
+          "runs": 61,
+          "balls": 85
+        },
+        {
+          "runs": 61,
+          "balls": 86
+        },
+        {
+          "runs": 62,
+          "balls": 87
+        },
+        {
+          "runs": 62,
+          "balls": 88
+        },
+        {
+          "runs": 62,
+          "balls": 89
+        },
+        {
+          "runs": 63,
+          "balls": 90
+        },
+        {
+          "runs": 67,
+          "balls": 91
+        },
+        {
+          "runs": 68,
+          "balls": 92
+        },
+        {
+          "runs": 68,
+          "balls": 93
+        },
+        {
+          "runs": 69,
+          "balls": 94
+        },
+        {
+          "runs": 70,
+          "balls": 95
+        },
+        {
+          "runs": 70,
+          "balls": 96
+        },
+        {
+          "runs": 70,
+          "balls": 97
+        },
+        {
+          "runs": 71,
+          "balls": 98
+        },
+        {
+          "runs": 71,
+          "balls": 99
+        },
+        {
+          "runs": 71,
+          "balls": 100
+        },
+        {
+          "runs": 71,
+          "balls": 101
+        },
+        {
+          "runs": 72,
+          "balls": 102
+        },
+        {
+          "runs": 72,
+          "balls": 103
+        },
+        {
+          "runs": 72,
+          "balls": 104
+        },
+        {
+          "runs": 73,
+          "balls": 105
+        },
+        {
+          "runs": 73,
+          "balls": 106
+        },
+        {
+          "runs": 73,
+          "balls": 107
+        },
+        {
+          "runs": 74,
+          "balls": 108
+        },
+        {
+          "runs": 74,
+          "balls": 109
+        },
+        {
+          "runs": 75,
+          "balls": 110
+        },
+        {
+          "runs": 75,
+          "balls": 111
+        },
+        {
+          "runs": 76,
+          "balls": 112
+        },
+        {
+          "runs": 77,
+          "balls": 113
+        },
+        {
+          "runs": 77,
+          "balls": 114
+        },
+        {
+          "runs": 78,
+          "balls": 115
+        },
+        {
+          "runs": 78,
+          "balls": 116
+        },
+        {
+          "runs": 78,
+          "balls": 117
+        },
+        {
+          "runs": 78,
+          "balls": 118
+        },
+        {
+          "runs": 78,
+          "balls": 119
+        },
+        {
+          "runs": 79,
+          "balls": 120
+        },
+        {
+          "runs": 80,
+          "balls": 121
+        },
+        {
+          "runs": 81,
+          "balls": 122
+        },
+        {
+          "runs": 81,
+          "balls": 123
+        },
+        {
+          "runs": 81,
+          "balls": 124
+        },
+        {
+          "runs": 81,
+          "balls": 125
+        },
+        {
+          "runs": 82,
+          "balls": 126
+        },
+        {
+          "runs": 83,
+          "balls": 127
+        },
+        {
+          "runs": 84,
+          "balls": 128
+        },
+        {
+          "runs": 85,
+          "balls": 129
+        },
+        {
+          "runs": 85,
+          "balls": 130
+        },
+        {
+          "runs": 85,
+          "balls": 131
+        },
+        {
+          "runs": 86,
+          "balls": 132
+        },
+        {
+          "runs": 86,
+          "balls": 133
+        },
+        {
+          "runs": 86,
+          "balls": 134
+        },
+        {
+          "runs": 86,
+          "balls": 135
+        },
+        {
+          "runs": 89,
+          "balls": 136
+        },
+        {
+          "runs": 89,
+          "balls": 137
+        },
+        {
+          "runs": 90,
+          "balls": 138
+        },
+        {
+          "runs": 90,
+          "balls": 139
+        },
+        {
+          "runs": 90,
+          "balls": 140
+        },
+        {
+          "runs": 91,
+          "balls": 141
+        },
+        {
+          "runs": 92,
+          "balls": 142
+        },
+        {
+          "runs": 93,
+          "balls": 143
+        },
+        {
+          "runs": 94,
+          "balls": 144
+        },
+        {
+          "runs": 95,
+          "balls": 145
+        },
+        {
+          "runs": 99,
+          "balls": 146
+        },
+        {
+          "runs": 99,
+          "balls": 147
+        },
+        {
+          "runs": 99,
+          "balls": 148
+        },
+        {
+          "runs": 99,
+          "balls": 149
+        },
+        {
+          "runs": 99,
+          "balls": 150
+        },
+        {
+          "runs": 99,
+          "balls": 151
+        },
+        {
+          "runs": 99,
+          "balls": 152
+        },
+        {
+          "runs": 103,
+          "balls": 153
+        },
+        {
+          "runs": 103,
+          "balls": 154
+        },
+        {
+          "runs": 103,
+          "balls": 155
+        },
+        {
+          "runs": 107,
+          "balls": 156
+        },
+        {
+          "runs": 111,
+          "balls": 157
+        },
+        {
+          "runs": 113,
+          "balls": 158
+        },
+        {
+          "runs": 114,
+          "balls": 159
+        },
+        {
+          "runs": 115,
+          "balls": 160
+        },
+        {
+          "runs": 115,
+          "balls": 161
+        },
+        {
+          "runs": 116,
+          "balls": 162
+        },
+        {
+          "runs": 116,
+          "balls": 163
+        },
+        {
+          "runs": 117,
+          "balls": 164
+        },
+        {
+          "runs": 118,
+          "balls": 165
+        },
+        {
+          "runs": 118,
+          "balls": 166
+        },
+        {
+          "runs": 119,
+          "balls": 167
+        },
+        {
+          "runs": 121,
+          "balls": 168
+        },
+        {
+          "runs": 122,
+          "balls": 169
+        },
+        {
+          "runs": 123,
+          "balls": 170
+        },
+        {
+          "runs": 124,
+          "balls": 171
+        },
+        {
+          "runs": 125,
+          "balls": 172
+        },
+        {
+          "runs": 126,
+          "balls": 173
+        },
+        {
+          "runs": 126,
+          "balls": 174
+        },
+        {
+          "runs": 126,
+          "balls": 175
+        },
+        {
+          "runs": 127,
+          "balls": 176
+        },
+        {
+          "runs": 127,
+          "balls": 177
+        },
+        {
+          "runs": 128,
+          "balls": 178
+        },
+        {
+          "runs": 129,
+          "balls": 179
+        },
+        {
+          "runs": 129,
+          "balls": 180
+        },
+        {
+          "runs": 130,
+          "balls": 181
+        },
+        {
+          "runs": 134,
+          "balls": 182
+        },
+        {
+          "runs": 135,
+          "balls": 183
+        },
+        {
+          "runs": 135,
+          "balls": 184
+        },
+        {
+          "runs": 136,
+          "balls": 185
+        },
+        {
+          "runs": 137,
+          "balls": 186
+        },
+        {
+          "runs": 137,
+          "balls": 187
+        },
+        {
+          "runs": 138,
+          "balls": 188
+        },
+        {
+          "runs": 139,
+          "balls": 189
+        },
+        {
+          "runs": 141,
+          "balls": 190
+        },
+        {
+          "runs": 141,
+          "balls": 191
+        },
+        {
+          "runs": 142,
+          "balls": 192
+        },
+        {
+          "runs": 144,
+          "balls": 193
+        },
+        {
+          "runs": 144,
+          "balls": 194
+        },
+        {
+          "runs": 145,
+          "balls": 195
+        },
+        {
+          "runs": 146,
+          "balls": 196
+        },
+        {
+          "runs": 148,
+          "balls": 197
+        },
+        {
+          "runs": 150,
+          "balls": 198
+        },
+        {
+          "runs": 151,
+          "balls": 199
         }
       ],
       "current": {
@@ -478,14 +1271,14 @@
               },
               "bowling": {
                 "wickets_taken": 1,
-                "runs_conceded": 10,
+                "runs_conceded": 23,
                 "fours_conceded": 2,
                 "sixes_conceded": 0,
-                "balls_bowled": 12,
+                "balls_bowled": 42,
                 "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 8,
-                "strike_rate": 12,
-                "economy_rate": 5
+                "dot_balls_bowled": 25,
+                "strike_rate": 42,
+                "economy_rate": 3.285714285714286
               }
             },
             {
@@ -495,7 +1288,7 @@
                 "name": "Axar Patel ",
                 "job": "all rounder",
                 "isBatting": false,
-                "isBowling": false,
+                "isBowling": true,
                 "isTaken": "",
                 "onStrike": false
               },
@@ -508,14 +1301,14 @@
               },
               "bowling": {
                 "wickets_taken": 0,
-                "runs_conceded": 6,
-                "fours_conceded": 1,
+                "runs_conceded": 24,
+                "fours_conceded": 2,
                 "sixes_conceded": 0,
-                "balls_bowled": 6,
+                "balls_bowled": 31,
                 "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 3,
+                "dot_balls_bowled": 14,
                 "strike_rate": 0,
-                "economy_rate": 6
+                "economy_rate": 4.64516129032258
               }
             },
             {
@@ -568,14 +1361,14 @@
               },
               "bowling": {
                 "wickets_taken": 0,
-                "runs_conceded": 0,
-                "fours_conceded": 0,
+                "runs_conceded": 31,
+                "fours_conceded": 3,
                 "sixes_conceded": 0,
-                "balls_bowled": 0,
+                "balls_bowled": 30,
                 "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 0,
+                "dot_balls_bowled": 11,
                 "strike_rate": 0,
-                "economy_rate": 0
+                "economy_rate": 6.200000000000001
               }
             },
             {
@@ -598,14 +1391,14 @@
               },
               "bowling": {
                 "wickets_taken": 0,
-                "runs_conceded": 11,
+                "runs_conceded": 17,
                 "fours_conceded": 2,
                 "sixes_conceded": 0,
-                "balls_bowled": 18,
+                "balls_bowled": 30,
                 "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 14,
+                "dot_balls_bowled": 20,
                 "strike_rate": 0,
-                "economy_rate": 3.666666666666667
+                "economy_rate": 3.4
               }
             },
             {
@@ -628,14 +1421,14 @@
               },
               "bowling": {
                 "wickets_taken": 0,
-                "runs_conceded": 8,
+                "runs_conceded": 18,
                 "fours_conceded": 0,
                 "sixes_conceded": 0,
-                "balls_bowled": 18,
+                "balls_bowled": 36,
                 "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 13,
+                "dot_balls_bowled": 22,
                 "strike_rate": 0,
-                "economy_rate": 2.6666666666666665
+                "economy_rate": 3
               }
             },
             {
@@ -645,7 +1438,7 @@
                 "name": "Kuldeep Yadav",
                 "job": "bowler",
                 "isBatting": false,
-                "isBowling": true,
+                "isBowling": false,
                 "isTaken": "",
                 "onStrike": false
               },
@@ -658,14 +1451,14 @@
               },
               "bowling": {
                 "wickets_taken": 0,
-                "runs_conceded": 0,
-                "fours_conceded": 0,
+                "runs_conceded": 23,
+                "fours_conceded": 3,
                 "sixes_conceded": 0,
-                "balls_bowled": 1,
+                "balls_bowled": 30,
                 "maiden_overs_bowled": 0,
-                "dot_balls_bowled": 1,
+                "dot_balls_bowled": 16,
                 "strike_rate": 0,
-                "economy_rate": 0
+                "economy_rate": 4.6000000000000005
               }
             }
           ]
@@ -680,15 +1473,15 @@
                 "_id": "adb63514-591b-4b50-827e-193b9f15925e",
                 "name": "Imam-ul-Haq",
                 "job": "batter",
-                "isBatting": true,
+                "isBatting": false,
                 "isBowling": false,
-                "isTaken": "",
-                "onStrike": true
+                "isTaken": "[9.2] run out Axar Patel ",
+                "onStrike": false
               },
               "batting": {
                 "runs_scored": 10,
-                "balls_played": 25,
-                "strike_rate": 40,
+                "balls_played": 26,
+                "strike_rate": 38.46153846153847,
                 "total_fours": 0,
                 "total_sixes": 0
               },
@@ -746,10 +1539,10 @@
                 "onStrike": false
               },
               "batting": {
-                "runs_scored": 2,
-                "balls_played": 4,
-                "strike_rate": 50,
-                "total_fours": 0,
+                "runs_scored": 57,
+                "balls_played": 72,
+                "strike_rate": 79.16666666666666,
+                "total_fours": 4,
                 "total_sixes": 0
               },
               "bowling": {
@@ -770,16 +1563,16 @@
                 "_id": "a1eeff41-19ae-4b29-a0b6-07f6daffc1c5",
                 "name": "Mohammad Rizwan",
                 "job": "batter",
-                "isBatting": false,
+                "isBatting": true,
                 "isBowling": false,
                 "isTaken": "",
-                "onStrike": false
+                "onStrike": true
               },
               "batting": {
-                "runs_scored": 0,
-                "balls_played": 0,
-                "strike_rate": 0,
-                "total_fours": 0,
+                "runs_scored": 46,
+                "balls_played": 75,
+                "strike_rate": 61.33333333333333,
+                "total_fours": 3,
                 "total_sixes": 0
               },
               "bowling": {
@@ -1007,15 +1800,15 @@
           ]
         },
         "stats": {
-          "runs": 47,
-          "balls": 55,
-          "wickets": 1,
-          "crr": 5.127272727272727,
-          "fours": 6,
+          "runs": 151,
+          "balls": 199,
+          "wickets": 2,
+          "crr": 4.552763819095477,
+          "fours": 13,
           "sixes": 0,
           "extras": {
-            "wides": 8,
-            "byes": 4,
+            "wides": 9,
+            "byes": 6,
             "noBalls": 0
           }
         }

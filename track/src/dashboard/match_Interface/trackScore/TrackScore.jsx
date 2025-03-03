@@ -227,7 +227,7 @@ export default function TackScore() {
     }, [isWicket])
 
     useEffect(() => {
-        if(wicketType !== defVal && wicketType !== 'run out') setRunsAmount(0)
+        if(wicketType !== defVal && wicketType !== 'run out') setRunsAmount('0')
         setChangeEnds('No')
         setCatcher(defVal)
         setWhoIsOut(defVal)
