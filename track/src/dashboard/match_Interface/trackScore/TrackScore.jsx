@@ -345,10 +345,6 @@ export default function TackScore() {
     const [loading, setLoading] = useState(false)
     const updateData = async () => {
     try {
-        if(!runsAmount || isNaN(runsAmount)) {
-            setRunsAmountErr(true)
-            return
-        }
         setLoading(true)
         const temp = JSON.parse(JSON.stringify(data))
 
@@ -422,6 +418,10 @@ export default function TackScore() {
                         }
                     })
                 } else {
+                    if(!runsAmount || isNaN(runsAmount)) {
+                        setRunsAmountErr(true)
+                        return
+                    }
                     const runs = Number(runsAmount)
                     switch (ballType) {
                     case 'normal':
@@ -742,6 +742,10 @@ export default function TackScore() {
                         }
                     })
                 } else {
+                    if(!runsAmount || isNaN(runsAmount)) {
+                        setRunsAmountErr(true)
+                        return
+                    }
                     const runs = Number(runsAmount)
                     switch (ballType) {
                     case 'normal':
