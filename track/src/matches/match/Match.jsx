@@ -62,7 +62,7 @@ export default function Match() {
             :
             <div className='flex flex-col items-center size-full h-[100vh] overflow-auto'>
                 <div className='relative py-3 pb-7 flex flex-col items-center w-full *:font-robotoSans *:font-[100]'>
-                    <h1 className='text-[2rem] 700:text-[3rem]'>{match.name}</h1>
+                    <h1 className='text-center text-[2rem] 700:text-[3rem]'>{match.name}</h1>
                     <h1 className='text-[.7rem] 700:text-[1rem]'>{match.location}</h1>
                     <h1 className='text-[.7rem] 700:text-[1rem]'>{formatDate(match.date)}</h1>
                     <Link
