@@ -1,18 +1,35 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Account_Matches_History_Instance from './Account_Matches_History_Instance'
 import { useSelector } from 'react-redux'
+import axios from 'axios'
 
 export default function Account_MatchesHistory() {
+    const [matches, setMatches] = useState([])
+    const domain = useSelector(state => state.globals.domain)
     useEffect(() => {
         document.getElementById('option').textContent = 'Matches Played'
+        const getMatches = async () => {
+            const fetchDocument = (id) => axios.get(`${domain}/matches/search/${id}`).then(res => res.data)
+            Promise.allSettled(account.matches_played.map(id => fetchDocument(id)))
+            .then(results => {
+                const successful = results.filter(res => res.status === 'fulfilled').map(res => res.value)
+                setMatches(successful.flat())
+            })
+        }
+        getMatches()
     }, [])
     const account = useSelector(state => state.account.data)
 
     return (
     account.matches_played.length ?
         <div className={`flex flex-col gap-y-3 items-center relative mt-[70px] 700:mt-[80px] overflow-x-hidden overflow-y-auto min-h-[calc(100vh-70px)] 700:min-h-[calc(100vh-80px)] min-w-[360px] w-full py-5 overlap-scr`}>
-            {account.matches_played.map((id, index) => (
-                <Account_Matches_History_Instance key={index} id={id}/>
+            {matches.map((element, index) => (
+                <Account_Matches_History_Instance
+                key={index}
+                id={element?._id}
+                name={element?.name}
+                location={element?.location}
+                date={element?.date}/>
             ))}
         </div>
     :

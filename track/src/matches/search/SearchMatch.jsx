@@ -3,8 +3,9 @@ import axios from 'axios'
 import Loading from '../../assets/Loading'
 import { useSelector } from 'react-redux'
 import Account_Matches_History_Instance from '../../accounts/account_Matches_History/Account_Matches_History_Instance'
+import Search_Matches_History_Instance from './Search_Matches_History_Instance'
 
-export default function Search() {
+export default function SearchMatch() {
     const domain = useSelector(state => state.globals.domain)
     const [search, setSearch] = useState('')
     const [matches, setMatches] = useState([])
@@ -70,7 +71,13 @@ export default function Search() {
                     {(() => {
                         return matches
                     })().map((element, index) => (
-                        <Account_Matches_History_Instance key={index} id={element?._id}/>
+                        <Search_Matches_History_Instance
+                            key={index}
+                            id={element?._id}
+                            name={element?.name}
+                            location={element?.location}
+                            date={element?.date}
+                        />
                     ))}
                 </div>
                 :

@@ -1,27 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-export default function Account_Matches_History_Instance({id, name, location, date}) {
-    const formatDate = (inputDate) => {
-        const date = new Date(inputDate)
-        if (isNaN(date)) {
-          throw new Error("Invalid date provided")
-        }
-      
-        const options = { day: 'numeric', month: 'long', year: 'numeric' }
-        const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date)
-      
-        let hours = date.getHours()
-        const minutes = date.getMinutes().toString().padStart(2, '0')
-        const ampm = hours >= 12 ? 'pm' : 'am'
-        hours = hours % 12 || 12
-      
-        const formattedTime = `${hours}:${minutes}${ampm}`
-      
-        return `${formattedDate} ${formattedTime}`
+const formatDate = (inputDate) => {
+    const date = new Date(inputDate)
+    if (isNaN(date)) {
+      throw new Error("Invalid date provided")
     }
+  
+    const options = { day: 'numeric', month: 'long', year: 'numeric' }
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(date)
+  
+    let hours = date.getHours()
+    const minutes = date.getMinutes().toString().padStart(2, '0')
+    const ampm = hours >= 12 ? 'pm' : 'am'
+    hours = hours % 12 || 12
+  
+    const formattedTime = `${hours}:${minutes}${ampm}`
+  
+    return `${formattedDate} ${formattedTime}`
+}
+export default function Search_Matches_History_Instance({id, name, location, date}) {
     return (
-        <Link to={`/match/${id}`} target='_blank' className={`transition ease-linear px-5 py-2 flex flex-col border border-[#bdbdbd] justify-center relative w-[94%] 850:w-[97%] rounded-md hover:bg-[#e4e4e4] cursor-pointer`}>
+        <Link to={`/match/${id}`} target='_blank' className={`transition ease-linear px-5 py-2 flex flex-col border border-[#bdbdbd] justify-center relative w-[99.5%] rounded-md hover:bg-[#e4e4e4] cursor-pointer`}>
             <div className={`relative flex flex-col text-[#3b3b3b]`}>
                 <div className={`relative`}>
                 <div className='py-2 absolute right-0 scale-[.8] 850:scale-[1]'>
