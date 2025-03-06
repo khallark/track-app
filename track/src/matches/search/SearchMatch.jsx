@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react'
 import axios from 'axios'
 import Loading from '../../assets/Loading'
 import { useSelector } from 'react-redux'
-import Account_Matches_History_Instance from '../../accounts/account_Matches_History/Account_Matches_History_Instance'
 import Search_Matches_History_Instance from './Search_Matches_History_Instance'
 
 export default function SearchMatch() {
@@ -22,7 +21,7 @@ export default function SearchMatch() {
         }
         try {
             setLoading(true)
-            const response = await axios.get(`${domain}/matches/search/${search}`);
+            const response = await axios.get(`${domain}/matches/search/${encodeURIComponent(search)}`);
             setMatches(response.data);
         } catch {} finally {
             setLoading(false)
