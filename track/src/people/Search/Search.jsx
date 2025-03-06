@@ -21,7 +21,7 @@ export default function Search() {
         }
         try {
             setLoading(true)
-            const response = await axios.get(`${domain}/accounts/search/${search}`);
+            const response = await axios.get(`${domain}/accounts/search/${encodeURIComponent(search)}`);
             setAccounts(response.data);
         } catch {} finally {
             setLoading(false)
