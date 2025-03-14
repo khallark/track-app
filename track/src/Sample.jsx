@@ -7,7 +7,7 @@ export default function Sample() {
     const [socket, setSocket] = useState(null)
 
     useEffect(() => {
-        const socketInstance = io('wss://localhost:3000', {
+        const socketInstance = io('https://track-app.up.railway.app', {
             transports: ['websocket'],
             withCredentials: true
         })
