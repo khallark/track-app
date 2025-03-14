@@ -37,6 +37,7 @@ import Overs from './matches/match/Overs.jsx'
 import Squads from './matches/match/Squads.jsx'
 import SearchMatch from './matches/search/SearchMatch.jsx'
 import Page404 from './Page404.jsx'
+import Sample from './Sample.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -183,6 +184,10 @@ const Router = createBrowserRouter([
             element: <Squads/>
           }
         ]
+      },
+      {
+        path: 'sample',
+        element: <Sample/>
       },
       {
         path: '*',
