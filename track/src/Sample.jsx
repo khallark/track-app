@@ -7,7 +7,10 @@ export default function Sample() {
     const [socket, setSocket] = useState(null)
 
     useEffect(() => {
-        const socketInstance = io('http://localhost:3000')
+        const socketInstance = io('wss://localhost:3000', {
+            transports: ['websocket'],
+            withCredentials: true
+        })
         setSocket(socketInstance)
         return () => {
             socketInstance.disconnect()
