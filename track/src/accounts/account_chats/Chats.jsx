@@ -36,6 +36,7 @@ export default function Chats() {
     })
 
     const chatRef = useRef(null);
+    const inpRef = useRef(null)
 
     const isAtBottom = () => {
         if (!chatRef.current) return false;
@@ -101,6 +102,7 @@ export default function Chats() {
                     </div>
                     <div className='p-2 relative'>
                         <input
+                            ref={inpRef}
                             className='p-2 w-full border border-gray-400 placeholder:text-gray-600 rounded-md'
                             type="text"
                             value={inp}
@@ -113,6 +115,7 @@ export default function Chats() {
                             if(inp) {
                                 socket.emit('chat message', inp)
                                 setInp('')
+                                inpRef.current.autoFocus = true
                             }
                         }}>Send</button>
                     </div>
