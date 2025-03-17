@@ -33,7 +33,7 @@ export default function Chats() {
             </ul>
             {openedChat ?
                 <div className={`z-[10000] *:font-robotoSans flex flex-col animate-showUpFast absolute top-0 right-0 h-[100vh] w-full bg-white`}>
-                    <div className={`flex items-center p-2 gap-3 shadow-md text-[.8rem] w-full border-b`}>
+                    <div className={`bg-white fixed top-0 left-0 flex items-center p-2 gap-3 shadow-md text-[.8rem] w-full border-b`}>
                         <div className='cursor-pointer' onClick={() => setOpenedChat(false)}><NoProfile size={35}/></div>
                         <div className={`font-[400] *:font-robotoSans flex flex-col`}>
                             <h1>User</h1>
@@ -41,13 +41,13 @@ export default function Chats() {
                         </div>
                     </div>
                     <div className='flex flex-col flex-grow overflow-y-auto overlap-scr'>
-                        {/* {(() => {
+                        {(() => {
                             const arr = []
                             for(let i = 0; i < 100; i++) {
                                 arr.push(i)
                             }
                             return arr
-                        })().map((i, index) => <h1 key={index}>{i}</h1>)} */}
+                        })().map((i, index) => <h1 key={index}>{i}</h1>)}
                     </div>
                     <div className='p-2'>
                         <input
