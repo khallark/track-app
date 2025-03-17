@@ -115,7 +115,7 @@ export default function Chats() {
                             if(inp) {
                                 socket.emit('chat message', inp)
                                 setInp('')
-                                inpRef.current.autoFocus = true
+                                inpRef.current.focus()
                             }
                         }}>Send</button>
                     </div>
