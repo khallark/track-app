@@ -21,7 +21,7 @@ export default function Account_MatchesHistory() {
     const account = useSelector(state => state.account.data)
 
     return (
-    account.matches_played.length ?
+    account?.matches_played.length ?
         <div className={`flex flex-col gap-y-3 items-center relative mt-[70px] 700:mt-[80px] overflow-x-hidden overflow-y-auto min-h-[calc(100vh-70px)] 700:min-h-[calc(100vh-80px)] min-w-[360px] w-full py-5 overlap-scr`}>
             {matches.map((element, index) => (
                 <Account_Matches_History_Instance

@@ -40,7 +40,7 @@ export default function Chats() {
                             <h1 className='text-gray-500'>online</h1>
                         </div>
                     </div>
-                    <div className='flex flex-col flex-grow overflow-y-auto overlap-scr'>
+                    <div className='mt-[55.38px] flex flex-col flex-grow overflow-y-auto overlap-scr'>
                         {(() => {
                             const arr = []
                             for(let i = 0; i < 100; i++) {
