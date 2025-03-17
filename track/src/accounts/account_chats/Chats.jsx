@@ -41,13 +41,13 @@ export default function Chats() {
                         </div>
                     </div>
                     <div className='flex flex-col flex-grow overflow-y-auto overlap-scr'>
-                        {(() => {
+                        {/* {(() => {
                             const arr = []
                             for(let i = 0; i < 100; i++) {
                                 arr.push(i)
                             }
                             return arr
-                        })().map((i, index) => <h1 key={index}>{i}</h1>)}
+                        })().map((i, index) => <h1 key={index}>{i}</h1>)} */}
                     </div>
                     <div className='p-2'>
                         <input
