@@ -62,6 +62,20 @@ export default function Account_Header() {
                     </div>
                 </NavLink>
                 <NavLink
+                    to='chats'
+                    className='border-t border-t-[#ffffff48] cursor-pointer hover:bg-[#384447] flex items-center min-h-[50px]'
+                    onClick={() => setMenu(false)}
+                >
+                    <div className={`cursor-pointer px-[18px] scale-[.9] 850:scale-[1]`} onClick={() => setMenu(false)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" width="24" height="24" id="me" fill='white'>
+                            <path d="M19.7.5H4.3C2.2.5.5 2.2.5 4.3v15.4c0 2.1 1.7 3.8 3.8 3.8h15.4c2.1 0 3.8-1.7 3.8-3.8V4.3c0-2.1-1.7-3.8-3.8-3.8zm-7.2 14.9c0 .3-.2.5-.5.5s-.5-.2-.5-.5v-4.8c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5v4.8c0 .3-.2.5-.5.5s-.5-.2-.5-.5v-4.8c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5v4.8c0 .3-.2.5-.5.5s-.5-.2-.5-.5V8.6c0-.3.2-.5.5-.5s.5.2.5.5v.1c.4-.3.9-.5 1.5-.5.8 0 1.5.4 2 1 .4-.6 1.2-1 2-1 1.3 0 2.4 1.1 2.4 2.4v4.8zm7.6-3.4c-.1.1-.2.2-.4.2h-3.9c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h3.3c-.1-.4-.4-.8-.7-1.1-1.1-1.1-2.9-1.1-4 0s-1.1 2.9 0 4 2.9 1.1 4 0c.2-.2.3-.4.5-.6.1-.2.4-.3.7-.2.2.1.3.4.2.7-.2.4-.4.6-.6.9-.7.7-1.7 1.1-2.7 1.1s-1.9-.4-2.7-1.1c-1.5-1.5-1.5-3.9 0-5.3 1.5-1.5 3.9-1.5 5.3 0 .6.6 1 1.3 1.1 2.2.1 0 0 .1-.1.2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 className={`text-[.9rem] text-white font-[100] font-robotoSans`}>My Chats</h1>
+                    </div>
+                </NavLink>
+                <NavLink
                     to='followers'
                     className='border-t border-t-[#ffffff48] cursor-pointer hover:bg-[#384447] flex items-center min-h-[50px]'
                     onClick={() => setMenu(false)}

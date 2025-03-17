@@ -38,6 +38,7 @@ import Squads from './matches/match/Squads.jsx'
 import SearchMatch from './matches/search/SearchMatch.jsx'
 import Page404 from './Page404.jsx'
 import Sample from './Sample.jsx'
+import Chats from './accounts/account_chats/Chats.jsx'
 
 const Router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const Router = createBrowserRouter([
           {
             path: 'me',
             element: <Account_Home/>
+          },
+          {
+            path: 'chats',
+            element: <Chats/>
           },
           {
             path: 'followers',
