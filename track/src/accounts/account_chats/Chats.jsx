@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NoProfile from '../../assets/NoProfile'
+import { io } from 'socket.io-client'
 
 export default function Chats() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -14,6 +15,57 @@ export default function Chats() {
     useEffect(() => {
         document.getElementById('option').textContent = 'chats'
     }, [])
+
+    const [arr, setArr] = useState([])
+    const [inp, setInp] = useState('')
+    const [socket, setSocket] = useState(null)
+
+    useEffect(() => {
+        const socketInstance = io('https://track-app.up.railway.app', {
+            transports: ['websocket'],
+            withCredentials: true
+        })
+        setSocket(socketInstance)
+        return () => {
+            socketInstance.disconnect()
+        }
+    }, [])
+    
+    socket?.on('chat message', (msg) => {
+        setArr([...arr, msg])
+    })
+
+    const chatRef = useRef(null);
+
+    const isAtBottom = () => {
+        if (!chatRef.current) return false;
+        const { scrollTop, scrollHeight, clientHeight } = chatRef.current;
+        return scrollHeight - scrollTop <= clientHeight + 20 + 65
+    }
+
+    useEffect(() => {
+        if (isAtBottom()) {
+            setTimeout(() => {
+                if (chatRef.current) {
+                    chatRef.current.scrollTop = chatRef.current.scrollHeight;
+                }
+            }, 0)
+        }
+    }, [arr])
+
+    useEffect(() => {
+        const handleKeydown = async (event) => {
+            if(event.key === 'Enter') {
+                socket.emit('chat message', inp)
+                setInp('')
+            }
+        }
+        document.addEventListener('keydown', handleKeydown)
+        return () => {
+            document.removeEventListener('keydown', handleKeydown)
+        }
+    })
+
     return (
         <div className={`mt-[70px] 700:mt-[80px] flex flex-col overflow-x-hidden overflow-y-auto min-h-[calc(100vh-70px)] 700:min-h-[calc(100vh-80px)] min-w-[360px] w-full overlap-scr`}>
             <ul>
@@ -40,21 +92,29 @@ export default function Chats() {
                             <h1 className='text-gray-500'>online</h1>
                         </div>
                     </div>
-                    <div className='mt-[55.38px] flex flex-col flex-grow overflow-y-auto overlap-scr'>
-                        {(() => {
-                            const arr = []
-                            for(let i = 0; i < 100; i++) {
-                                arr.push(i)
-                            }
-                            return arr
-                        })().map((i, index) => <h1 key={index}>{i}</h1>)}
+                    <div ref={chatRef} className='px-3 mt-[65px] flex flex-col gap-3 flex-grow overflow-y-auto overlap-scr'>
+                        {arr.map((i, index) => {
+                            return (
+                                <h1 className={`font-robotoSans text-white bg-blue-600 w-fit font-[400] px-3 p-2 rounded-2xl ${!(index % 2) ? 'rounded-br-none self-end' : 'rounded-bl-none'}`} key={index}>{i}</h1>
+                            )
+                        })}
                     </div>
-                    <div className='p-2'>
+                    <div className='p-2 relative'>
                         <input
                             className='p-2 w-full border border-gray-400 placeholder:text-gray-600 rounded-md'
                             type="text"
+                            value={inp}
+                            onChange={(e) => setInp(e.target.value)}
                             placeholder='type here...'
                         />
+                        <button
+                        className='px-2 absolute top-4 right-5'
+                        onClick={() => {
+                            if(inp) {
+                                socket.emit('chat message', inp)
+                                setInp('')
+                            }
+                        }}>Send</button>
                     </div>
                 </div>
                 :
