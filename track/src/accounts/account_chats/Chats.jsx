@@ -94,15 +94,15 @@ export default function Chats() {
     return (
         <div className={`mt-[70px] 700:mt-[80px] flex flex-col overflow-x-hidden overflow-y-auto min-h-[calc(100vh-70px)] 700:min-h-[calc(100vh-80px)] min-w-[360px] w-full overlap-scr`}>
             <ul>
-            {chatList.map((user, index) =>
+            {chatList.map((chat, index) =>
                 <li
                     className={`flex items-center p-3 gap-3 text-[.8rem] 700:text-[1rem] w-full hover:bg-gray-100 cursor-pointer`} key={index}
                     onClick={() => {
                         setOpenedChat(true)
-                        socket.emit('request messages', user._id)
+                        socket.emit('request messages', chat._id)
                     }}><NoProfile size={windowWidth > 700 ? 40 : 35}/>
                 <div className={`font-[400] *:font-robotoSans flex flex-col`}>
-                    <h1>{user[user?._id === account._id ? 'userA' : 'userB']?.name}</h1>
+                    <h1>{chat[chat?.userA._id === account._id ? 'userB' : 'userA']?.name}</h1>
                     <h1 className='text-gray-500'>Hello World!</h1>
                 </div>
                 </li>
