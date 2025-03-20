@@ -68,7 +68,6 @@ export default function Chats() {
     }
 
     useEffect(() => {
-        console.log(arr)
         if (isAtBottom()) {
             setTimeout(() => {
                 if (chatRef.current) {
