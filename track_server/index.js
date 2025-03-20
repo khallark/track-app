@@ -69,7 +69,7 @@ io.on('connection', (socket) => {
             await chat.save()
 
             const from_chatList = await chat_model.find({_id: { $in: from.chats }}).lean()
-            socket.emit('receive message', {message: chat.messages[chat.messages.length - 1], chatList: from_chatList.map(({messages, ...rest}) => rest)})
+            io.to(from.socketId).emit('receive message', {message: chat.messages[chat.messages.length - 1], chatList: from_chatList.map(({messages, ...rest}) => rest)})
             
             if(to.socketId) {
                 const to_chatList = await chat_model.find({_id: { $in: to.chats }}).lean()
@@ -78,7 +78,8 @@ io.on('connection', (socket) => {
 
         }
     })
-/*3*/
+    
+/*4*/
     socket.on('disconnect', async () => {
         await account_model.findOneAndUpdate({ socketId: socket.id }, { socketId: null })
     })
