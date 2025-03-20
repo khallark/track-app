@@ -39,19 +39,23 @@ const chat_model = require('./model/chat_model')
 io.on('connection', (socket) => {
 /*1*/
     socket.on('register', async (_id) => {
-        if(!_id) {
-            console.error('didnt receive id (null)')
-            return
+        try {
+            if(!_id) {
+                console.error('didnt receive id (null)')
+                return
+            }
+            const user = await account_model.findById(_id)
+            user.socketId = socket.id
+            await user.save()
+            const chatList = await chat_model.find({_id: { $in: user.chats }}).lean()
+            io.to(socket.id).emit('receive chatlist', chatList.map(item => {
+                const {messages, ...rest} = item
+                return {...rest, message: messages.length ? messages[messages.length - 1] : null}
+            }))
+            console.log('successfull')
+        } catch (error) {
+            console.log(error)
         }
-        const user = await account_model.findById(_id)
-        user.socketId = socket.id
-        await user.save()
-        const chatList = await chat_model.find({_id: { $in: user.chats }}).lean()
-        io.to(socket.id).emit('receive chatlist', chatList.map(item => {
-            const {messages, ...rest} = item
-            return {...rest, message: messages.length ? messages[messages.length - 1] : null}
-        }))
-        console.log('successfull')
     })
 
 /*2*/
