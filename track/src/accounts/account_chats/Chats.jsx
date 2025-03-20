@@ -102,7 +102,7 @@ export default function Chats() {
                         socket.emit('request messages', user._id)
                     }}><NoProfile size={windowWidth > 700 ? 40 : 35}/>
                 <div className={`font-[400] *:font-robotoSans flex flex-col`}>
-                    <h1>{user[user?.userA === account.shoName ? 'userA' : 'userB']?.name}</h1>
+                    <h1>{user[user?._id === account._id ? 'userA' : 'userB']?.name}</h1>
                     <h1 className='text-gray-500'>Hello World!</h1>
                 </div>
                 </li>
