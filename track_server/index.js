@@ -73,7 +73,7 @@ io.on('connection', (socket) => {
             
             if(to.socketId) {
                 const to_chatList = await chat_model.find({_id: { $in: to.chats }}).lean()
-                io.to(to.socketId).emit('receive message', {message, chatList: to_chatList.map(({messages, ...rest}) => rest)})
+                io.to(to.socketId).emit('receive message', {message: chat.messages[chat.messages.length - 1], chatList: to_chatList.map(({messages, ...rest}) => rest)})
             }
 
         }
