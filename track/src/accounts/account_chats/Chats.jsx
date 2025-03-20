@@ -58,19 +58,17 @@ export default function Chats() {
 
     useEffect(() => {
         // https://track-app.up.railway.app
-        setTimeout(() => {
-            const socketInstance = io('https://track-app.up.railway.app', {
-                transports: ['websocket'],
-                withCredentials: true
-            })
-            socketInstance.emit('register', account?._id)
+        const socketInstance = io('https://track-app.up.railway.app', {
+            transports: ['websocket'],
+            withCredentials: true
+        })
+        socketInstance.emit('register', account?._id)
 
-            socketInstance.on('receive chatlist', chatListInit)
-            socketInstance.on('get messages', chatInit)
-            socketInstance.on('receive message', receiveMessage)
+        socketInstance.on('receive chatlist', chatListInit)
+        socketInstance.on('get messages', chatInit)
+        socketInstance.on('receive message', receiveMessage)
 
-            setSocket(socketInstance)
-        }, 1000)
+        setSocket(socketInstance)
 
         return () => {
             socketInstance.off('receive chatlist', chatListInit)
