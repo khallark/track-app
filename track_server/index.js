@@ -13,7 +13,7 @@ app.use(express.json({ limit: '1mb' }))
 const PORT = process.env.PORT || 3000
 
 app.use(cors({
-    origin: '*',
+    origin: 'https://track-app-pi.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }))
@@ -26,7 +26,7 @@ dbConnect()
 const server = new createServer(app)
 const io = new Server(server, {
     cors: {
-        origin: '*',
+        origin: 'https://track-app-pi.vercel.app',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true,
     },
