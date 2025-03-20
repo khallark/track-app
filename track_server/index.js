@@ -49,13 +49,14 @@ io.on('connection', (socket) => {
         io.to(socket.id).emit('receive chatlist', chatList.map(({messages, ...rest}) => rest))
     })
 
+/*2*/
     socket.on('request messages', async (chat_id) => {
         const chat = await chat_model.findById(chat_id)
-        socket.emit('get messages', chat.messages)
+        socket.emit('get messages', chat)
     })
 
-/*2*/
-    socket.on('send message', async (sender_id, receiver_id, chat_id, message) => {
+/*3*/
+    socket.on('send message', async ({sender_id, receiver_id, chat_id, message}) => {
         const from = await account_model.findById(sender_id)
         const to = await account_model.findById(receiver_id)
         if(to) {
@@ -68,7 +69,7 @@ io.on('connection', (socket) => {
             await chat.save()
 
             const from_chatList = await chat_model.find({_id: { $in: from.chats }}).lean()
-            socket.emit('receive message', {message, chatList: from_chatList.map(({messages, ...rest}) => rest)})
+            socket.emit('receive message', {message: chat.messages[chat.messages.length - 1], chatList: from_chatList.map(({messages, ...rest}) => rest)})
             
             if(to.socketId) {
                 const to_chatList = await chat_model.find({_id: { $in: to.chats }}).lean()
