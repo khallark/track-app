@@ -7,6 +7,7 @@ export default function Chats() {
     const account = useSelector(state => state.account.data)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const [openedChat, setOpenedChat] = useState(false)
+
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
     }
@@ -24,25 +25,44 @@ export default function Chats() {
     const [socket, setSocket] = useState(null)
     const [chatList, setChatList] = useState([])
 
+    const chatInfoRef = useRef(chat);
+    const openedChatRef = useRef(openedChat);
+    const socketRef = useRef(socket)
+
+    useEffect(() => {
+        chatInfoRef.current = chat
+        openedChatRef.current = openedChat
+        socketRef.current = socket
+    }, [chat, openedChat, socket])
+
+    const chatListInit = (list) => {
+        setChatList(list.sort((a, b) => Date.parse(b.lastUpdated) - Date.parse(a.lastUpdated)))
+    }
+    const chatInit = (chat) => {
+        setArr(chat.messages)
+        setChat(chat)
+    }
+    const receiveMessage = ({message, chatList}) => {
+        setArr(prevArr => [...prevArr, message])
+        let temp = [...chatList].sort((a, b) => Date.parse(b.lastUpdated) - Date.parse(a.lastUpdated))
+        if(chatInfoRef.current && chatInfoRef.current._id === temp[0]._id) {
+            socketRef.current.emit('message checked', {chat_id: chatInfoRef.current._id, receiver_id: account._id})
+            if(temp[0].userA._id === account._id) {
+                temp[0].userA.checked = true
+            } else {
+                temp[0].userB.checked = true
+            }
+        }
+        setChatList(temp)
+    }
+
     useEffect(() => {
         // https://track-app.up.railway.app
-        const socketInstance = io('https://track-app.up.railway.app', {
+        const socketInstance = io('http://localhost:3000', {
             transports: ['websocket'],
             withCredentials: true
         })
         socketInstance.emit('register', account?._id)
-
-        const chatListInit = (list) => {
-            setChatList(list)
-        }
-        const chatInit = (chat) => {
-            setArr(chat.messages)
-            setChat(chat)
-        }
-        const receiveMessage = ({message, chatList}) => {
-            setArr(prevArr => [...prevArr, message])
-            setChatList(chatList)
-        }
 
         socketInstance.on('receive chatlist', chatListInit)
         socketInstance.on('get messages', chatInit)
@@ -61,6 +81,10 @@ export default function Chats() {
     const chatRef = useRef(null);
     const inpRef = useRef(null)
 
+    useEffect(() => {
+        if(chatRef.current) chatRef.current.scrollTop = chatRef.current.scrollHeight
+    }, [openedChat, arr])
+
     const isAtBottom = () => {
         if (!chatRef.current) return false;
         const { scrollTop, scrollHeight, clientHeight } = chatRef.current;
@@ -71,7 +95,7 @@ export default function Chats() {
         if (isAtBottom()) {
             setTimeout(() => {
                 if (chatRef.current) {
-                    chatRef.current.scrollTop = chatRef.current.scrollHeight;
+                    chatRef.current.scrollTop = chatRef.current.scrollHeight
                 }
             }, 0)
         }
@@ -98,11 +122,11 @@ export default function Chats() {
                     className={`flex items-center p-3 gap-3 text-[.8rem] 700:text-[1rem] w-full hover:bg-gray-100 cursor-pointer`} key={index}
                     onClick={() => {
                         setOpenedChat(true)
-                        socket.emit('request messages', chat._id)
+                        socket.emit('request messages', {chat_id: chat._id, my_id: account._id})
                     }}><NoProfile size={windowWidth > 700 ? 40 : 35}/>
-                <div className={`font-[400] *:font-robotoSans flex flex-col`}>
+                <div className={`${!chat[chat?.userA._id === account._id ? 'userA' : 'userB']?.checked ? 'font-[700]' : 'font-[400]'} *:font-robotoSans flex flex-col`}>
                     <h1>{chat[chat?.userA._id === account._id ? 'userB' : 'userA']?.name}</h1>
-                    <h1 className='text-gray-500'>Hello World!</h1>
+                    <h1 className='text-gray-500'>{chat.message ? chat.message.text : 'Start a new conversation'}</h1>
                 </div>
                 </li>
             )}

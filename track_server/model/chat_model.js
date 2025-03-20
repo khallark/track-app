@@ -18,7 +18,7 @@ const Chat_Schema = mongoose.Schema({
     }],
     lastUpdated: {
         type: Date,
-        required: true
+        default: Date.now
     }
 })
 
