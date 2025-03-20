@@ -24,23 +24,31 @@ export default function Chats() {
     const [chatList, setChatList] = useState([])
 
     useEffect(() => {
+        // http://localhost:3000
         const socketInstance = io('https://track-app.up.railway.app', {
             transports: ['websocket'],
             withCredentials: true
         })
         socketInstance.emit('register', account?._id)
-        socketInstance.on('receive chatlist', (list) => {
-            console.log(list)
-        })
+
+        const chatListInit = (list) => {
+            setChatList(list)
+        }
+        const chatInit = (messages) => {
+            setArr(messages)
+        }
+
+        socketInstance.on('receive chatlist', chatListInit)
+        socketInstance.on('get messages', chatInit)
+
         setSocket(socketInstance)
+
         return () => {
+            socketInstance.off('receive chatlist', chatListInit)
+            socketInstance.off('get messages', chatInit)
             socketInstance.disconnect()
         }
     }, [])
-    
-    socket?.on('chat message', (msg) => {
-        setArr([...arr, msg])
-    })
 
     const chatRef = useRef(null);
     const inpRef = useRef(null)
@@ -77,16 +85,16 @@ export default function Chats() {
     return (
         <div className={`mt-[70px] 700:mt-[80px] flex flex-col overflow-x-hidden overflow-y-auto min-h-[calc(100vh-70px)] 700:min-h-[calc(100vh-80px)] min-w-[360px] w-full overlap-scr`}>
             <ul>
-            {[['Aryan Singh', 'haan bahi kya kar rha hai'],
-            ['Suresh Raina', 'kuchh nii...'],
-            ['Raghav Chadda', 'fest pe ayega??'],
-            ['Rohan Singh', 'chll bye fir'],
-            ['Kunal Khallar', 'oye??'],
-            ].map((user, index) =>
-                <li className={`flex items-center p-3 gap-3 text-[.8rem] 700:text-[1rem] w-full hover:bg-gray-100 cursor-pointer`} key={index} onClick={() => setOpenedChat(true)}><NoProfile size={windowWidth > 700 ? 40 : 35}/>
+            {chatList.map((user, index) =>
+                <li
+                    className={`flex items-center p-3 gap-3 text-[.8rem] 700:text-[1rem] w-full hover:bg-gray-100 cursor-pointer`} key={index}
+                    onClick={() => {
+                        setOpenedChat(true)
+                        socket.emit('request messages', user._id)
+                    }}><NoProfile size={windowWidth > 700 ? 40 : 35}/>
                 <div className={`font-[400] *:font-robotoSans flex flex-col`}>
-                    <h1>{user[0]}</h1>
-                    <h1 className='text-gray-500'>{user[1]}</h1>
+                    <h1>{user[user?.userA === account.shoName ? 'userA' : 'userB']?.name}</h1>
+                    <h1 className='text-gray-500'>Hello World!</h1>
                 </div>
                 </li>
             )}
@@ -103,7 +111,7 @@ export default function Chats() {
                     <div ref={chatRef} className='px-3 mt-[65px] flex flex-col gap-3 flex-grow overflow-y-auto overlap-scr'>
                         {arr.map((i, index) => {
                             return (
-                                <h1 className={`font-robotoSans text-white bg-blue-600 w-fit font-[400] px-3 p-2 rounded-2xl ${!(index % 2) ? 'rounded-br-none self-end' : 'rounded-bl-none'}`} key={index}>{i}</h1>
+                                <h1 className={`font-robotoSans text-white bg-blue-600 w-fit font-[400] px-3 p-2 rounded-2xl ${!(i?.sender === account?._id) ? 'rounded-bl-none' : 'rounded-br-none self-end'}`} key={index}>{i.text}</h1>
                             )
                         })}
                     </div>

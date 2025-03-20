@@ -45,12 +45,17 @@ io.on('connection', (socket) => {
         const user = await account_model.findById(_id)
         user.socketId = socket.id
         await user.save()
-        const chatList = await chat_model.find({_id: { $in: user.chats }})
+        const chatList = await chat_model.find({_id: { $in: user.chats }}).lean()
         io.to(socket.id).emit('receive chatlist', chatList.map(({messages, ...rest}) => rest))
     })
 
+    socket.on('request messages', async (chat_id) => {
+        const chat = await chat_model.findById(chat_id)
+        socket.emit('get messages', chat.messages)
+    })
+
 /*2*/
-    socket.on('send message', async ({sender_id, receiver_id, chat_id, message}) => {
+    socket.on('send message', async (sender_id, receiver_id, chat_id, message) => {
         const from = await account_model.findById(sender_id)
         const to = await account_model.findById(receiver_id)
         if(to) {
@@ -62,11 +67,11 @@ io.on('connection', (socket) => {
             })
             await chat.save()
 
-            const from_chatList = await chat_model.find({_id: { $in: from.chats }})
-            io.to(from.socketId).emit('receive message', {message, chatList: from_chatList.map(({messages, ...rest}) => rest)})
+            const from_chatList = await chat_model.find({_id: { $in: from.chats }}).lean()
+            socket.emit('receive message', {message, chatList: from_chatList.map(({messages, ...rest}) => rest)})
             
             if(to.socketId) {
-                const to_chatList = await chat_model.find({_id: { $in: to.chats }})
+                const to_chatList = await chat_model.find({_id: { $in: to.chats }}).lean()
                 io.to(to.socketId).emit('receive message', {message, chatList: to_chatList.map(({messages, ...rest}) => rest)})
             }
 
