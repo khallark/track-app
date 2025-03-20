@@ -57,13 +57,14 @@ export default function Chats() {
     }
 
     useEffect(() => {
-        console.log('hi')
+        
         // https://track-app.up.railway.app
         try {
             const socketInstance = io('https://track-app.up.railway.app', {
                 transports: ['websocket', 'polling'],
                 withCredentials: true
             })
+            console.log('hi')
             socketInstance.emit('register', account?._id)
     
             socketInstance.on('receive chatlist', chatListInit)
