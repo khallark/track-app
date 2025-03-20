@@ -51,6 +51,7 @@ io.on('connection', (socket) => {
             const {messages, ...rest} = item
             return {...rest, message: messages.length ? messages[messages.length - 1] : null}
         }))
+        console.log('successfull')
     })
 
 /*2*/
