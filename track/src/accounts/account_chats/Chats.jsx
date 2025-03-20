@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import NoProfile from '../../assets/NoProfile'
 import { io } from 'socket.io-client'
+import { useSelector } from 'react-redux'
 
 export default function Chats() {
+    const account = useSelector(state => state.account.data)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const [openedChat, setOpenedChat] = useState(false)
     const handleResize = () => {
@@ -19,11 +21,16 @@ export default function Chats() {
     const [arr, setArr] = useState([])
     const [inp, setInp] = useState('')
     const [socket, setSocket] = useState(null)
+    const [chatList, setChatList] = useState([])
 
     useEffect(() => {
         const socketInstance = io('https://track-app.up.railway.app', {
             transports: ['websocket'],
             withCredentials: true
+        })
+        socketInstance.emit('register', account?._id)
+        socketInstance.on('receive chatlist', (list) => {
+            console.log(list)
         })
         setSocket(socketInstance)
         return () => {

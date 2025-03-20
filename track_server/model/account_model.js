@@ -96,6 +96,11 @@ const Account_Schema = mongoose.Schema({
         type: Array,
         default: []
     },
+    chats: [String],
+    socketId: {
+        type: String,
+        default: null
+    },
     refreshToken: {
         type: String,
         default: null
