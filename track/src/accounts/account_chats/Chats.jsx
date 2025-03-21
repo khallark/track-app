@@ -58,7 +58,7 @@ export default function Chats() {
 
     useEffect(() => {
         // https://track-app.up.railway.app
-        const socketInstance = io('ws://track-app.up.railway.app', {
+        const socketInstance = io('https://track-app.up.railway.app', {
             transports: ['polling', 'websocket'],
             withCredentials: true
         })
