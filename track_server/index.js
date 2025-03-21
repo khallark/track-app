@@ -23,14 +23,14 @@ app.use('/api', Routes)
 
 dbConnect()
 
-const server = new createServer(app)
+const server = createServer(app)
 const io = new Server(server, {
     cors: {
         origin: 'https://track-app-pi.vercel.app',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true,
     },
-    transports: ['websocket', 'polling']
+    transports: ['polling', 'websocket']
 })
 
 const account_model = require('./model/account_model')
