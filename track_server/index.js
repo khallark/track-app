@@ -31,7 +31,7 @@ const io = new Server(server, {
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true,
     },
-    transports: ['polling', 'websocket']
+    transports: ['websocket']
 })
 
 const account_model = require('./model/account_model')
