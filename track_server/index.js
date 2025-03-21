@@ -26,7 +26,8 @@ dbConnect()
 const server = createServer(app)
 const io = new Server(server, {
     cors: {
-        origin: 'https://track-app-pi.vercel.app',
+        // origin: 'https://track-app-pi.vercel.app',
+        origin: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
         credentials: true,
     },
