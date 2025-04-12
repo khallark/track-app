@@ -108,7 +108,7 @@ export default function Login() {
                                 style={{
                                     border: `1px solid #${color}70`,
                                 }}
-                                placeholder='Enter your username...'
+                                placeholder='Enter password...'
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
